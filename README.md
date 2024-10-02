@@ -1,2 +1,1 @@
-ITMO student
-kanye enjoyer
+ITMO student, ye enjoyer
