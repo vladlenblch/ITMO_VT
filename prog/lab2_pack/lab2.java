@@ -14,12 +14,12 @@ public class lab2 {
         Kirlia kirlia = new Kirlia("Kirlia", 1);
         Gallade gallade = new Gallade("Gallade", 1);
 
-        // b.addAlly(tapubulu);
-        // b.addAlly(amaura);
+        b.addAlly(tapubulu);
+        b.addAlly(amaura);
         b.addAlly(aurorus);
 
-        // b.addFoe(ralts);
-        // b.addFoe(kirlia);
+        b.addFoe(ralts);
+        b.addFoe(kirlia);
         b.addFoe(gallade);
 
         b.go();
