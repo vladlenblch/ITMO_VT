@@ -1,7 +1,7 @@
-package lab2_pack.pokemons;
+package pokemons;
 
-import lab2_pack.moves.special.ShadowBall;
-import lab2_pack.moves.status.Confide;
+import moves.special.ShadowBall;
+import moves.status.Confide;
 import ru.ifmo.se.pokemon.*;
 
 

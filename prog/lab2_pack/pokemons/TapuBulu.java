@@ -1,9 +1,9 @@
-package lab2_pack.pokemons;
+package pokemons;
 
-import lab2_pack.moves.physical.Facade;
-import lab2_pack.moves.special.Psywave;
-import lab2_pack.moves.status.Swagger;
-import lab2_pack.moves.status.Withdraw;
+import moves.physical.Facade;
+import moves.special.Psywave;
+import moves.status.Swagger;
+import moves.status.Withdraw;
 import ru.ifmo.se.pokemon.*;
 
 public class TapuBulu extends Pokemon {

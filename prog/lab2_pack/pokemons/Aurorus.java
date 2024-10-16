@@ -1,9 +1,9 @@
-package lab2_pack.pokemons;
+package pokemons;
 
-import lab2_pack.moves.physical.StoneEdge;
-import lab2_pack.moves.special.DreamEater;
-import lab2_pack.moves.special.Thunder;
-import lab2_pack.moves.status.DoubleTeam;
+import moves.physical.StoneEdge;
+import moves.special.DreamEater;
+import moves.special.Thunder;
+import moves.status.DoubleTeam;
 import ru.ifmo.se.pokemon.*;
 
 public class Aurorus extends Pokemon {
