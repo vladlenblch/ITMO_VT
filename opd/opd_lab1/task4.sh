@@ -6,6 +6,6 @@ cat ~/lab0/bellossom4/archen ~/lab0/bellossom4/chimchar ~/lab0/bellossom4/monfer
 
 cat ~/lab0/bellossom4/monferno ~/lab0/sawsbuck6/cottonee ~/lab0/sawsbuck6/frillish ~/lab0/sawsbuck6/whiscash 2>>/tmp/hsperfdata_s466468 | grep "ci"
 
-ls -lR lab0 2>&1 | grep '^d' | sort -k6 | tail -n2
+ls -R lab0 2>&1 | grep '^d' | sort -k6 | tail -n2
 
 cat ~/lab0/bellossom4/monferno ~/lab0/sawsbuck6/cottonee ~/lab0/sawsbuck6/frillish ~/lab0/sawsbuck6/whiscash | nl | sort -r
