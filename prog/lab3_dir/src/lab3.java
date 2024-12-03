@@ -40,8 +40,9 @@ public class lab3 {
         try {
             poorPerson.shoot(wolves);
         } catch (NoWolvesException e) {
-            System.out.println(e.getMessage());
+            System.out.println("ошибка: " + e.getMessage());
         }
+        System.out.println("был произведен выстрел, его продолжительность: " + shotInfo.duration() + " секунд, а громкость: " + shotInfo.volume() + " децибел");
 
         poorPerson.reactToFear(wolf);
         System.out.println(" ");
@@ -54,7 +55,7 @@ public class lab3 {
         howlSound.play();
         echoSound.play();
         System.out.println(" ");
-        squad.isAfraidOf(wolf);
+        squad.isAfraidOf(wolves);
     }
 
     public static ArrayList<Wolf> generateRandomWolves() {
@@ -65,6 +66,7 @@ public class lab3 {
         for (int i = 1; i <= numberOfWolves; i++) {
             wolves.add(new Wolf("волк " + i));
         }
+
         return wolves;
     }
 }
