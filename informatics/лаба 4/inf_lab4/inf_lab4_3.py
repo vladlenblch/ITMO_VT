@@ -59,7 +59,7 @@ def parse(json_obj, num_spaces=0):
     return yaml_str
 
 
-with open('D:\ITMO\informatics\лаба 4\schedule.json', 'r', encoding='utf-8') as file:
+with open('D:\ITMO\informatics\лаба 4\schedule.json.json', 'r', encoding='utf-8') as file:
     json_data = json.load(file)
 yaml_data = parse(json_data)
 

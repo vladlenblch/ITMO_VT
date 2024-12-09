@@ -1,0 +1,178 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{geometry}
+\geometry{top=10mm, bottom=5mm, left=10mm, right=10mm}
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\pagestyle{empty}
+
+\begin{document}
+
+    \newcommand{\bluelineAB}{
+        \begin{tikzpicture}
+            \draw[line width=1mm, NavyBlue] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$A$};
+            \node[above, scale=0.8] at (1.5,0) {$B$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\redlineCA}{
+        \begin{tikzpicture}
+            \draw[line width=1mm, BrickRed] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$C$};
+            \node[above, scale=0.8] at (1.5,0) {$A$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\bluelineDE}{
+        \begin{tikzpicture}
+            \draw[line width=0.5mm, NavyBlue] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$D$};
+            \node[above, scale=0.8] at (1.5,0) {$E$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\redlineFD}{
+        \begin{tikzpicture}
+            \draw[line width=0.5mm, BrickRed] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$F$};
+            \node[above, scale=0.8] at (1.5,0) {$D$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\blacklineBC}{
+        \begin{tikzpicture}
+            \draw[line width=1mm, black] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$B$};
+            \node[above, scale=0.8] at (1.5,0) {$C$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\orangelineEF}{
+        \begin{tikzpicture}
+            \draw[line width=0.5mm, Dandelion] (0,0) -- (1.5,0);
+            \node[above, scale=0.8] at (0,0) {$E$};
+            \node[above, scale=0.8] at (1.5,0) {$F$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\orangeangle}{
+        \begin{tikzpicture}
+            \draw[Dandelion,fill=Dandelion] (0, 0) -- (0.25, -0.9) arc(-60:-115:0.7) -- cycle;
+            \node[above] at (0,0) {\tiny$A$};
+            \node[below] at (0.25, -0.9) {\tiny$B$};
+            \node[below] at (-0.45, -0.9) {\tiny$C$};
+        \end{tikzpicture}
+    }
+
+    \newcommand{\blackangle}{
+        \begin{tikzpicture}
+            \draw[black,fill=black] (0, 0) -- (0.25, -0.9) arc(-60:-115:0.7) -- cycle;
+            \node[above] at (0,0) {\tiny$D$};
+            \node[below] at (0.25, -0.9) {\tiny$E$};
+            \node[below] at (-0.45, -0.9) {\tiny$F$};
+        \end{tikzpicture}
+    }
+    
+    \begin{minipage}{0.59\textwidth}
+        \hfill \Large{КНИГА I ПРЕДЛ. XXV. ТЕОРЕМА} \hfill \large{49}
+        \vspace{3mm}
+        \begin{wrapfigure}[5]{l}{0.19\textwidth}
+            \includegraphics[width=0.2\textwidth]{e.jpeg}
+        \end{wrapfigure}
+        
+        \\
+        \begin{spacing}{1.2}
+            \large сли \textit{у двух треугольников две стороны \bluelineAB и \redlineCA соответственно равны
+            двум сторонам \bluelineDE и \redlineFD другого, но основания неравны, то угол над большим
+            основанием \blacklineBC одного треугольника меньше угла под меньшим \orangelineEF другого.}
+        \end{spacing}
+        
+        \vspace*{1em}
+        
+        \begin{center}
+
+            \raisebox{-1.3em}{\orangeangle} \Large{=} , \Large{>} или \Large{<} \raisebox{-1.3em}{\blackangle} \\
+
+            \raisebox{-1.3em}{\orangeangle} не равен \raisebox{-1.3em}{\blackangle}, \\ 
+
+            поскольку если \raisebox{-1.3em}{\orangeangle} \Large{=} \raisebox{-1.3em}{\blackangle}, то \\
+
+            \blacklineBC \Large{=} \orangelineEF (пр. I.\raisebox{-0.2em}{4}), \\
+
+            что противоречит гипотезе; \\
+            
+            \vspace*{1em}
+
+            \raisebox{-1.3em}{\orangeangle} не меньше \raisebox{-1.3em}{\blackangle}, \\
+
+            поскольку если \raisebox{-1.3em}{\orangeangle} \Large{<} \raisebox{-1.3em}{\blackangle}, \\
+
+            то \blacklineBC \Large{<} \orangelineEF (пр. I.\raisebox{-0.2em}{24}), \\
+
+            что противоречит гипотезе. \\
+
+            $\therefore$ \raisebox{-1.3em}{\orangeangle} \Large{>} \raisebox{-1.3em}{\blackangle}. \\
+
+        \end{center}
+
+        \begin{flushright}
+
+            ч.т.д.
+
+        \end{flushright}
+        
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.3\textwidth}
+
+        \begin{center}
+
+            \begin{tikzpicture}
+                \coordinate [label=above:{\tiny$A$}] (A) at (-2,3);
+                \coordinate [label=below left:{\tiny$C$}] (C) at (-4,-1);
+                \coordinate [label=below right:{\tiny$B$}] (B) at (-1,0);
+
+                \draw[Dandelion,fill=Dandelion] (-2, 3) -- (-1.75, 2.1) arc(-60:-115:0.7) -- cycle;
+            
+                \draw[line width=1mm, BrickRed] (C) -- (A);
+                \draw[line width=1mm, NavyBlue] (A) -- (B);
+                \draw[line width=1mm, black] (C) -- (B);
+                
+            \end{tikzpicture}
+
+            \vspace*{2em}
+            
+            \begin{tikzpicture}
+                \coordinate [label=above:{\tiny$D$}] (D) at (-2,3);
+                \coordinate [label=below left:{\tiny$F$}] (F) at (-4,-1);
+                \coordinate [label=below right:{\tiny$E$}] (E) at (-1,0);
+
+                \draw[black,fill=black] (-2, 3) -- (-1.75, 2.1) arc(-60:-115:0.7) -- cycle;
+                
+                \draw[line width=0.5mm, BrickRed] (F) -- (D);
+                \draw[line width=0.5mm, NavyBlue] (D) -- (E);
+                \draw[line width=0.5mm, Dandelion] (F) -- (E);
+            
+            \end{tikzpicture}
+
+            \vspace*{22em}
+            
+        \end{center}
+        
+    \end{minipage}
+
+\end{document}
