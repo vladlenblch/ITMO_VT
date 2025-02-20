@@ -1,0 +1,31 @@
+Table Phenomena {
+  phenomen_id int [pk]
+  name varchar[64]
+  description varchar[64]
+}
+
+Table Planet {
+  planet_id int [pk]
+  name varchar[64]
+}
+
+Table Consequences {
+  consequence_id int [pk]
+  consequence varchar[64]
+}
+
+Table Phenomena_Consequences {
+  phenomen_id int [ref: > Phenomena.phenomen_id]
+  consequence_id int [ref: > Consequences.consequence_id]
+}
+
+Table Phenomena_In_Scene {
+  natural_scene_id int [ref: > Natural_Scene.natural_scene_id]
+  phenomen_id int [ref: > Phenomena.phenomen_id]
+}
+
+Table Natural_Scene {
+  natural_scene_id int [pk]
+  planet_id int [ref: < Planet.planet_id]
+  timestamp timestamp
+}
