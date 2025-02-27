@@ -1,24 +1,24 @@
 CREATE TABLE IF NOT EXISTS natural_scene (
-    natural_scene_id SERIAL PRIMARY KEY,
+    natural_scene_id SERIAL NOT NULL PRIMARY KEY,
     planet_id INT NOT NULL,
     timestamp TIMESTAMP NOT NULL DEFAULT NOW(),
     FOREIGN KEY (planet_id) REFERENCES planet(planet_id)
 );
 
 CREATE TABLE IF NOT EXISTS planet (
-    planet_id SERIAL PRIMARY KEY,
-    name VARCHAR(64) NOT NULL UNIQUE
+    planet_id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(6) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS phenomena (
-    phenomen_id SERIAL PRIMARY KEY,
-    name VARCHAR(64) NOT NULL,
-    description VARCHAR(64)
+    phenomen_id SERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(12) NOT NULL,
+    description VARCHAR(10)
 );
 
 CREATE TABLE IF NOT EXISTS consequences (
-    consequence_id SERIAL PRIMARY KEY,
-    consequence VARCHAR(64) NOT NULL
+    consequence_id SERIAL NOT NULL PRIMARY KEY,
+    consequence VARCHAR(22) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS phenomena_consequences (
