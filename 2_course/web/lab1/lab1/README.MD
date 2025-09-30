@@ -22,7 +22,6 @@
 - **Java 17+**
 - **Gradle**
 - **FastCGI (через fastcgi-lib.jar)**
-- **Собственная валидация параметров**
 
 ### Frontend
 - **Vanilla JavaScript (ES6+)**
