@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EyeTracker Lab1</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/index.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div id="info">
+        Ларионов Владислав Васильевич
+        <br/>
+        P3209, 466468
+    </div>
+</nav>
+<main class="container">
+    <section class="top-section">
+        <div class="input-panel">
+        <form action="/" method="GET" id="data-form" novalidate>
+                <div id="xs">
+                    <label>Выберите X:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="x" value="-4"> -4</label>
+                        <label><input type="checkbox" name="x" value="-3"> -3</label>
+                        <label><input type="checkbox" name="x" value="-2"> -2</label>
+                        <label><input type="checkbox" name="x" value="-1"> -1</label>
+                        <label><input type="checkbox" name="x" value="0"> 0</label>
+                        <label><input type="checkbox" name="x" value="1"> 1</label>
+                        <label><input type="checkbox" name="x" value="2"> 2</label>
+                        <label><input type="checkbox" name="x" value="3"> 3</label>
+                        <label><input type="checkbox" name="x" value="4"> 4</label>
+                    </div>
+                </div>
+
+            <label for="y">Введите Y:</label>
+            <input type="number" id="y" name="y" placeholder="Введите число от -3 до 3 включительно" 
+                   min="-3" max="3" step="any" required>
+
+            <label for="r">Выберите R:</label>
+            <select id="r" name="r" required>
+                <option value="1.0">1.0</option>
+                <option value="1.5">1.5</option>
+                <option value="2.0">2.0</option>
+                <option value="2.5">2.5</option>
+                <option value="3.0">3.0</option>
+            </select>
+
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="error" hidden>
+            </div>
+        </div>
+        <div class="graph-panel">
+            <canvas id="graph" width="400" height="400"></canvas>
+        </div>
+    </section>
+    <section class="table-section">
+        <table id="result-table">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Время</th>
+                <th>Время выполнения</th>
+                <th>Результат</th>
+            </tr>
+        </table>
+    </section>
+</main>
+</body>
+</html>
