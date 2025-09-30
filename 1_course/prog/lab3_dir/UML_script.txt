@@ -1,0 +1,139 @@
+@startuml
+left to right direction
+
+package chars {
+    abstract class Character {
+        - creature : String
+        - alive : boolean
+        + Character(String creature)
+        + getCreature() : String
+        + setCreature(String creature) : void
+        + isAlive() : boolean
+        + die() : void
+        + isAfraidOf(Object target) : boolean
+        + reactToFear(Object target) : void
+        + toString() : String
+        + equals(Object o) : boolean
+        + hashCode() : int
+    }
+    class AnyOther {
+        + AnyOther(String creature)
+        + shoot(Object target) : String
+        + miss(Object target) : String
+        + isAfraidOf(Object target) : boolean
+    }
+    class Friday {
+        + Friday(String creature)
+        + gallop(Object target) : String
+        + isAfraidOf(Object target) : boolean
+    }
+    class PoorPerson {
+        + PoorPerson(String creature)
+        + shoot(ArrayList<Wolf> wolves) : String
+        + approach(Object target) : String
+        + isAfraidOf(Object target) : boolean
+    }
+    class Squad {
+        + Squad(String creature)
+        + isAfraidOf(Object target) : boolean
+    }
+    class Wolf {
+        + Wolf(String creature)
+        + isAfraidOf(Object target) : boolean
+        + toString() : String
+    }
+
+    Character <|-- AnyOther
+    Character <|-- Friday
+    Character <|-- PoorPerson
+    Character <|-- Squad
+    Character <|-- Wolf
+}
+
+package sounds {
+    abstract class SoundEffect {
+        - type : String
+        - duration : double
+        - volume : int
+        + SoundEffect(String type, double duration, int volume)
+        + play() : void
+        + getType() : String
+        + setType(String type) : void
+        + getDuration() : double
+        + setDuration(double duration) : void
+        + getVolume() : int
+        + setVolume(int volume) : void
+        # getDurationLevel() : String
+        # getVolumeLevel() : String
+        + toString() : String
+        + equals(Object o) : boolean
+        + hashCode() : int
+    }
+    class EchoSound {
+        + EchoSound(String type, double duration, int volume)
+        + play() : void
+    }
+    class HowlSound {
+        + HowlSound(String type, double duration, int volume)
+        + play() : void
+    }
+    class ShotSound {
+        + ShotSound(String type, double duration, int volume)
+        + play() : void
+    }
+
+    SoundEffect <|-- EchoSound
+    SoundEffect <|-- HowlSound
+    SoundEffect <|-- ShotSound
+}
+
+package interfaces {
+    interface IsAfraid {
+        + isAfraidOf(Object target) : boolean
+        + reactToFear(Object target) : void
+    }
+    interface IsAlive {
+        + isAlive() : boolean
+        + die() : void
+    }
+
+    Character ..|> IsAfraid
+    Character ..|> IsAlive
+}
+
+package enums {
+    enum location {
+        MOUNTAINS : String
+        SNOW : String
+        OLDCAR : String
+        ROAD : String
+        + location(String description)
+        + getDescription() : String
+    }
+}
+
+package exceptions {
+    class InvalidActionException {
+        + InvalidActionException(String message)
+    }
+    class NoWolvesException {
+        + NoWolvesException(String message)
+    }
+}
+
+package records {
+    class ShotInfo {
+        {static} +duration : double
+        {static} +volume : int
+    }
+}
+
+class lab3 {
+    + main(String[] args) : void
+    + generateRandomWolves() : ArrayList<Wolf>
+}
+
+exceptions::InvalidActionException -right-> chars::Friday : "throws"
+exceptions::NoWolvesException -right-> chars::PoorPerson : "throws"
+
+@enduml

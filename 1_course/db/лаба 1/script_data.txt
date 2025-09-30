@@ -1,0 +1,37 @@
+Table phenomena {
+  phenomen_id SERIAL [pk, not null]
+  name varchar[12]
+  description varchar[10]
+}
+
+Table planet {
+  planet_id SERIAL [pk, not null]
+  name varchar[6]
+}
+
+Table consequences {
+  consequence_id SERIAL [pk, not null]
+  consequence varchar[22]
+}
+
+Table phenomena_consequences {
+  phenomen_id int [not null]
+  consequence_id int [not null]
+}
+
+Table phenomena_in_scene {
+  natural_scene_id int [not null]
+  phenomen_id int [not null]
+}
+
+Table natural_scene {
+  natural_scene_id SERIAL [pk, not null]
+  planet_id int [not null]
+  timestamp timestamp
+}
+
+ref: phenomena_consequences.phenomen_id > phenomena.phenomen_id
+ref: phenomena_consequences.consequence_id > consequences.consequence_id
+ref: phenomena_in_scene.natural_scene_id > natural_scene.natural_scene_id
+ref: phenomena_in_scene.phenomen_id > phenomena.phenomen_id
+ref: planet.planet_id < natural_scene.planet_id
