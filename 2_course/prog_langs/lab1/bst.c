@@ -13,7 +13,6 @@ void bst_init(PurchaseBST* tree) {
     tree->size = 0;
 }
 
-// êîìàíäà 0 (ëîãèêà)
 static void bst_free_nodes(BSTNode* node) {
     if (!node) return;
     bst_free_nodes(node->left);
@@ -21,14 +20,12 @@ static void bst_free_nodes(BSTNode* node) {
     free(node);
 }
 
-// êîìàíäà 0 (âûçîâ)
 void bst_free(PurchaseBST* tree) {
     bst_free_nodes(tree->root);
     tree->root = NULL;
     tree->size = 0;
 }
 
-// êîìàíäà 1 (ëîãèêà)
 static BSTNode* bst_insert_node(BSTNode* node, const Purchase* p) {
     if (!node) {
         BSTNode* n = (BSTNode*)malloc(sizeof(BSTNode));
@@ -43,13 +40,11 @@ static BSTNode* bst_insert_node(BSTNode* node, const Purchase* p) {
     return node;
 }
 
-// êîìàíäà 1 (âûçîâ)
 void bst_insert(PurchaseBST* tree, const Purchase* p) {
     tree->root = bst_insert_node(tree->root, p);
     tree->size++;
 }
 
-// êîìàíäà 2 (ëîãèêà)
 static int bst_inorder_remove(BSTNode** node, int* curr, int target) {
     if (!*node) return 0;
     if (bst_inorder_remove(&(*node)->left, curr, target)) return 1;
@@ -77,7 +72,6 @@ static int bst_inorder_remove(BSTNode** node, int* curr, int target) {
     return bst_inorder_remove(&(*node)->right, curr, target);
 }
 
-// êîìàíäà 2 (âûçîâ)
 int bst_remove_by_index(PurchaseBST* tree, int index) {
     int curr = 0;
     int res = bst_inorder_remove(&tree->root, &curr, index);
@@ -85,7 +79,6 @@ int bst_remove_by_index(PurchaseBST* tree, int index) {
     return res;
 }
 
-// êîìàíäà 3 (ëîãèêà)
 static void bst_inorder_print_range(const BSTNode* node, int from, int to, int* idx, int fd, int fm, int fy, int td, int tm, int ty, int* found) {
     if (!node) return;
     bst_inorder_print_range(node->left, from, to, idx, fd, fm, fy, td, tm, ty, found);
@@ -99,7 +92,6 @@ static void bst_inorder_print_range(const BSTNode* node, int from, int to, int* 
     bst_inorder_print_range(node->right, from, to, idx, fd, fm, fy, td, tm, ty, found);
 }
 
-// êîìàíäà 3 (âûçîâ)
 void bst_print_range(const PurchaseBST* tree, int fd, int fm, int fy, int td, int tm, int ty) {
     int idx = 0;
     int found = 0;
@@ -111,7 +103,6 @@ void bst_print_range(const PurchaseBST* tree, int fd, int fm, int fy, int td, in
     printf("\n");
 }
 
-// êîìàíäà 4 (ëîãèêà)
 static void bst_inorder_print(const BSTNode* node, int* idx, int* found) {
     if (!node) return;
     bst_inorder_print(node->left, idx, found);
@@ -121,7 +112,6 @@ static void bst_inorder_print(const BSTNode* node, int* idx, int* found) {
     bst_inorder_print(node->right, idx, found);
 }
 
-// êîìàíäà 4 (âûçîâ)
 void bst_print_all(const PurchaseBST* tree) {
     int idx = 0;
     int found = 0;
@@ -131,4 +121,4 @@ void bst_print_all(const PurchaseBST* tree) {
         printf("no purchases\n");
     }
     printf("\n");
-} 
+}
