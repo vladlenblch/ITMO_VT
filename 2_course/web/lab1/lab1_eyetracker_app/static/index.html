@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EyeTracker Lab1</title>
+	<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+	<div class="main-split">
+		<div class="center-panel">
+			<canvas id="coordinateCanvas"></canvas>
+		</div>
+	</div>
+	<div class="results-section">
+		<h3>Результаты</h3>
+		<table id="resultsTable">
+			<thead>
+				<tr>
+					<th>Время</th>
+					<th>Результат</th>
+				</tr>
+			</thead>
+			<tbody id="resultsTableBody">
+			</tbody>
+		</table>
+	</div>
+	<script src="/static/index.js"></script>
+</body>
+</html>

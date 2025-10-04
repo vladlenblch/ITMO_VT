@@ -1,0 +1,8 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+pydantic>=1.10.0
+python-multipart>=0.0.5
+opencv-python>=4.8.0
+numpy>=1.24.0
+websockets>=11.0.0
+mediapipe>=0.10.0
