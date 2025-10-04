@@ -13,7 +13,7 @@ void bst_init(PurchaseBST* tree) {
     tree->size = 0;
 }
 
-// команда 0 (логика)
+// ГЄГ®Г¬Г Г­Г¤Г  0 (Г«Г®ГЈГЁГЄГ )
 static void bst_free_nodes(BSTNode* node) {
     if (!node) return;
     bst_free_nodes(node->left);
@@ -21,14 +21,14 @@ static void bst_free_nodes(BSTNode* node) {
     free(node);
 }
 
-// команда 0 (вызов)
+// ГЄГ®Г¬Г Г­Г¤Г  0 (ГўГ»Г§Г®Гў)
 void bst_free(PurchaseBST* tree) {
     bst_free_nodes(tree->root);
     tree->root = NULL;
     tree->size = 0;
 }
 
-// команда 1 (логика)
+// ГЄГ®Г¬Г Г­Г¤Г  1 (Г«Г®ГЈГЁГЄГ )
 static BSTNode* bst_insert_node(BSTNode* node, const Purchase* p) {
     if (!node) {
         BSTNode* n = (BSTNode*)malloc(sizeof(BSTNode));
@@ -43,13 +43,13 @@ static BSTNode* bst_insert_node(BSTNode* node, const Purchase* p) {
     return node;
 }
 
-// команда 1 (вызов)
+// ГЄГ®Г¬Г Г­Г¤Г  1 (ГўГ»Г§Г®Гў)
 void bst_insert(PurchaseBST* tree, const Purchase* p) {
     tree->root = bst_insert_node(tree->root, p);
     tree->size++;
 }
 
-// команда 2 (логика)
+// ГЄГ®Г¬Г Г­Г¤Г  2 (Г«Г®ГЈГЁГЄГ )
 static int bst_inorder_remove(BSTNode** node, int* curr, int target) {
     if (!*node) return 0;
     if (bst_inorder_remove(&(*node)->left, curr, target)) return 1;
@@ -77,7 +77,7 @@ static int bst_inorder_remove(BSTNode** node, int* curr, int target) {
     return bst_inorder_remove(&(*node)->right, curr, target);
 }
 
-// команда 2 (вызов)
+// ГЄГ®Г¬Г Г­Г¤Г  2 (ГўГ»Г§Г®Гў)
 int bst_remove_by_index(PurchaseBST* tree, int index) {
     int curr = 0;
     int res = bst_inorder_remove(&tree->root, &curr, index);
@@ -85,7 +85,7 @@ int bst_remove_by_index(PurchaseBST* tree, int index) {
     return res;
 }
 
-// команда 3 (логика)
+// ГЄГ®Г¬Г Г­Г¤Г  3 (Г«Г®ГЈГЁГЄГ )
 static void bst_inorder_print_range(const BSTNode* node, int from, int to, int* idx, int fd, int fm, int fy, int td, int tm, int ty, int* found) {
     if (!node) return;
     bst_inorder_print_range(node->left, from, to, idx, fd, fm, fy, td, tm, ty, found);
@@ -99,7 +99,7 @@ static void bst_inorder_print_range(const BSTNode* node, int from, int to, int* 
     bst_inorder_print_range(node->right, from, to, idx, fd, fm, fy, td, tm, ty, found);
 }
 
-// команда 3 (вызов)
+// ГЄГ®Г¬Г Г­Г¤Г  3 (ГўГ»Г§Г®Гў)
 void bst_print_range(const PurchaseBST* tree, int fd, int fm, int fy, int td, int tm, int ty) {
     int idx = 0;
     int found = 0;
@@ -111,7 +111,7 @@ void bst_print_range(const PurchaseBST* tree, int fd, int fm, int fy, int td, in
     printf("\n");
 }
 
-// команда 4 (логика)
+// ГЄГ®Г¬Г Г­Г¤Г  4 (Г«Г®ГЈГЁГЄГ )
 static void bst_inorder_print(const BSTNode* node, int* idx, int* found) {
     if (!node) return;
     bst_inorder_print(node->left, idx, found);
@@ -121,7 +121,7 @@ static void bst_inorder_print(const BSTNode* node, int* idx, int* found) {
     bst_inorder_print(node->right, idx, found);
 }
 
-// команда 4 (вызов)
+// ГЄГ®Г¬Г Г­Г¤Г  4 (ГўГ»Г§Г®Гў)
 void bst_print_all(const PurchaseBST* tree) {
     int idx = 0;
     int found = 0;
@@ -131,4 +131,4 @@ void bst_print_all(const PurchaseBST* tree) {
         printf("no purchases\n");
     }
     printf("\n");
-}
+} 
