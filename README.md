@@ -28,7 +28,7 @@
 |-------|---------|------------|
 | [`physics/`](2_course/physics/) | Физика | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
 | [`prog_langs/`](2_course/prog_langs/) | Языки программирования | ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black) |
-| [`web/`](2_course/web/) | Веб-программирование | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) |
+| [`web/`](2_course/web/) | Веб-программирование | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) |
 
 ## Напоминание
 
