@@ -1,8 +1,8 @@
 file = open("result.txt", "w")
 
 
-def output():   #основная функция, выводит ответ
-    nums = [int(i) for i in message]
+def output():
+    nums = [int(i) for i in start]
     s1 = nums[0] ^ nums[2] ^ nums[4] ^ nums[6]
     s2 = nums[1] ^ nums[2] ^ nums[5] ^ nums[6]
     s3 = nums[3] ^ nums[4] ^ nums[5] ^ nums[6]
@@ -19,7 +19,7 @@ def output():   #основная функция, выводит ответ
         file.write(str(bits[bit]))
 
 
-def correct_input():    #рекурсивная функция, проверяющая корректность ввода
+def correct_input():
     message = input()
     condition = len(message) == 7 and all(i in '01' for i in message)
     if not condition:
@@ -29,5 +29,5 @@ def correct_input():    #рекурсивная функция, проверяю
         return message
 
 
-message = correct_input()
+start = correct_input()
 output()
