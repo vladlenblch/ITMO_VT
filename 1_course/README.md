@@ -1,15 +1,15 @@
 # Базы данных
 
-![databases](databases.gif)
+![databases](./assets/databases.gif)
 
 # Информатика
 
-![informatics](informatics.gif)
+![informatics](./assets/informatics.gif)
 
 # ОПД
 
-![opd](opd.gif)
+![opd](./assets/opd.gif)
 
 # Программирование
 
-![prog](prog.gif)
+![prog](./assets/prog.gif)
