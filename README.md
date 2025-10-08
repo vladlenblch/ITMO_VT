@@ -33,7 +33,7 @@
 
 ## Языки
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vladlenblch&repo=ITMO_VT&layout=compact&theme=default)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vladlenblch&repo=ITMO_VT&layout=compact&theme=dark&hide_border=true&count_private=true)
 
 ## Напоминание
 
