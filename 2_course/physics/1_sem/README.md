@@ -4,7 +4,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green.svg)](https://pandas.pydata.org)
-[![Excel](https://img.shields.io/badge/Excel-Data%20Processing-yellow.svg)](https://www.microsoft.com/excel)
 [![Physics](https://img.shields.io/badge/Physics-Experimental-orange.svg)](https://)
 [![Statistics](https://img.shields.io/badge/Statistics-Analysis-purple.svg)](https://)
 
