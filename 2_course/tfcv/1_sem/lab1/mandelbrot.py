@@ -3,22 +3,24 @@ import matplotlib.pyplot as plt # type: ignore
 
 def mandelbrot(c, max_iter):
     z = np.zeros_like(c, dtype=np.complex128)
-    diverge = np.zeros(c.shape, dtype=bool)
-    iterations = np.zeros(c.shape, dtype=int)
+    diverge = np.zeros(c.shape, dtype=bool)  # Отслеживает какие точки уже разошлись
+    iterations = np.zeros(c.shape, dtype=int)  # Хранит количество итераций
     
     for i in range(max_iter):
-        mask = ~diverge
-        z[mask] = z[mask]**2 + c[mask]
-        new_diverge = np.abs(z) > 2
-        diverge_now = new_diverge & ~diverge
-        iterations[diverge_now] = i
-        diverge = diverge | new_diverge
+        mask = ~diverge  # Работаем только с точками, которые еще не разошлись
+        z[mask] = z[mask]**2 + c[mask]  # Основная формула Мандельброта
+        
+        new_diverge = np.abs(z) > 2  # Точки, которые разошлись на этой итерации
+        diverge_now = new_diverge & ~diverge  # Точки, которые только что разошлись
+        iterations[diverge_now] = i  # Записываем номер итерации расхождения
+        diverge = diverge | new_diverge  # Обновляем маску расходимости
         
     return iterations
 
 def show_mandelbrot_25_iterations():
     max_iter = 25
     
+    # Создаем фигуру с тремя подграфиками
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18, 5))
     
     # Основной вид
@@ -26,13 +28,16 @@ def show_mandelbrot_25_iterations():
     y_min, y_max = -1.5, 1.5
     width, height = 400, 400
     
+    # Создаем сетку комплексных чисел
     x = np.linspace(x_min, x_max, width)
     y = np.linspace(y_min, y_max, height)
     X, Y = np.meshgrid(x, y)
-    C = X + 1j * Y
+    C = X + 1j * Y  # Комплексная плоскость
     
+    # Вычисляем множество Мандельброта
     iterations = mandelbrot(C, max_iter)
     
+    # Визуализация основного вида
     im1 = ax1.imshow(iterations, extent=[x_min, x_max, y_min, y_max], 
                     cmap='hot', origin='lower')
     ax1.set_title('Множество Мандельброта\n25 итераций - Основной вид')
@@ -40,7 +45,7 @@ def show_mandelbrot_25_iterations():
     ax1.set_ylabel('Im(c)')
     plt.colorbar(im1, ax=ax1, label='Количество итераций')
     
-    # Приближение 1: Фрактальные ветви
+    # ПРИБЛИЖЕНИЕ 1: Фрактальные ветви
     x_min_zoom1, x_max_zoom1 = -0.6, -0.4
     y_min_zoom1, y_max_zoom1 = -0.7, -0.5
     
@@ -58,7 +63,7 @@ def show_mandelbrot_25_iterations():
     ax2.set_ylabel('Im(c)')
     plt.colorbar(im2, ax=ax2, label='Количество итераций')
     
-    # Приближение 2: Верхний кластер
+    # ПРИБЛИЖЕНИЕ 2: Верхний кластер
     x_min_zoom2, x_max_zoom2 = -0.1, 0.1
     y_min_zoom2, y_max_zoom2 = 0.6, 0.8
     
