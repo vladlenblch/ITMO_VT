@@ -6,9 +6,10 @@ def julia(z, c, max_iter):
     iterations = np.zeros(z.shape, dtype=int)
     
     for i in range(max_iter):
-        mask = ~diverge
-        z[mask] = z[mask]**2 + c
-        new_diverge = np.abs(z) > 2
+        mask = ~diverge  # Работаем только с точками, которые еще не разошлись
+        z[mask] = z[mask]**2 + c  # Формула Жюлиа - такая же как у Мандельброта, но c фиксировано
+        
+        new_diverge = np.abs(z) > 2  # Критерий расхождения
         diverge_now = new_diverge & ~diverge
         iterations[diverge_now] = i
         diverge = diverge | new_diverge
@@ -16,7 +17,7 @@ def julia(z, c, max_iter):
     return iterations
 
 def show_julia_c1():
-    c = complex(-0.5251993, 0.5251993)
+    c = complex(-0.5251993, 0.5251993)  # Фиксированный параметр c
     max_iter = 200
     
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
@@ -26,10 +27,11 @@ def show_julia_c1():
     y_min, y_max = -1.5, 1.5
     width, height = 400, 400
     
+    # Создаем сетку начальных значений z
     x = np.linspace(x_min, x_max, width)
     y = np.linspace(y_min, y_max, height)
     X, Y = np.meshgrid(x, y)
-    Z = X + 1j * Y
+    Z = X + 1j * Y  # Начальные значения z
     
     iterations = julia(Z, c, max_iter)
     
@@ -40,7 +42,7 @@ def show_julia_c1():
     ax1.set_ylabel('Im(z)')
     plt.colorbar(im1, ax=ax1, label='Количество итераций')
     
-    # Приближение: Центральная спираль
+    # ПРИБЛИЖЕНИЕ: Центральная спираль
     x_min_zoom, x_max_zoom = -0.5, 0.5
     y_min_zoom, y_max_zoom = -0.5, 0.5
     
