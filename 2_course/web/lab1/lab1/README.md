@@ -27,7 +27,6 @@
 - **Vanilla JavaScript (ES6+)**
 - **HTML5 Canvas**
 - **CSS3**
-- **Responsive Design**
 
 ## Структура проекта
 
