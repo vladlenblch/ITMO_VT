@@ -19,15 +19,15 @@
 ## Стек
 
 ### Backend
-- Java 17+
-- Maven (WAR packaging)
-- Jakarta Servlet / JSP
-- Jakarta CDI (Weld / контейнерная реализация в WildFly)
+- **Java 17+**
+- **Maven (WAR packaging)**
+- **Jakarta Servlet / JSP**
+- **Jakarta CDI (Weld / контейнерная реализация в WildFly)**
 
 ### Frontend
-- Vanilla JavaScript (ES6+)
-- HTML5 Canvas
-- CSS3
+- **Vanilla JavaScript (ES6+)**
+- **HTML5 Canvas**
+- **CSS3**
 
 ## Структура проекта
 
