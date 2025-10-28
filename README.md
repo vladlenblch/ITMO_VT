@@ -20,7 +20,7 @@
 | [`databases/`](1_course/databases/) | Базы данных | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white) |
 | [`informatics/`](1_course/informatics/) | Информатика | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
 | [`opd/`](1_course/opd/) | Основы профессиональной деятельности | ![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white) |
-| [`prog/`](1_course/prog/) | Программирование | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
+| [`prog/`](1_course/prog/) | Программирование | ![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white) |
 
 ### 2-й курс
 
