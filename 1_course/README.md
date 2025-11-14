@@ -1,15 +1,6 @@
-# Базы данных
+## 📚 Учебные предметы
 
-![databases](./assets/databases.gif)
-
-# Информатика
-
-![informatics](./assets/informatics.gif)
-
-# ОПД
-
-![opd](./assets/opd.gif)
-
-# Программирование
-
-![prog](./assets/prog.gif)
+| | |
+| :--- | :--- |
+| **Базы данных**<br>![databases](./assets/databases.gif) | **Информатика**<br>![informatics](./assets/informatics.gif) |
+| **ОПД**<br>![opd](./assets/opd.gif) | **Программирование**<br>![prog](./assets/prog.gif) |
