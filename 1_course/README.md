@@ -1,15 +1,15 @@
 <div align="center">
   
-  <h3>Базы данных</h3>
-  <img src="./assets/databases.gif" width="400">
+  <h2>Базы данных</h2>
+  <img src="./assets/databases.gif" width="500">
   
-  <h3>Информатика</h3>
-  <img src="./assets/informatics.gif" width="400">
+  <h2>Информатика</h2>
+  <img src="./assets/informatics.gif" width="500">
   
-  <h3>ОПД</h3>
-  <img src="./assets/opd.gif" width="400">
+  <h2>ОПД</h2>
+  <img src="./assets/opd.gif" width="500">
   
-  <h3>Программирование</h3>
-  <img src="./assets/prog.gif" width="400">
+  <h2>Программирование</h2>
+  <img src="./assets/prog.gif" width="500">
   
 </div>
