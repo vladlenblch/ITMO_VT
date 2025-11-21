@@ -1,12 +1,14 @@
 "use strict";
 
 (function () {
-    const BASE_R = 150; // canvas radius when r = MAX_R (5)
+    const BASE_R = 150; 
     const MAX_R = 5;
     let graphInitialized = false;
     let pfCallbacksAttached = false;
     let pfUpdateFn = null;
     let updateGraphRef = null;
+    let canvasListenerAttached = false;
+    let rObserverAttached = false;
     const LAST_R_KEY = "graph:lastR";
     let lastKnownR = loadLastKnownR();
     window.skipValidationMessages = window.skipValidationMessages || false;
@@ -96,7 +98,6 @@
 
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
-        // quarter circle strictly in bottom-right (x >= 0, y <= 0)
         ctx.lineTo(centerX + scaledR, centerY);
         ctx.arc(centerX, centerY, scaledR, 0, Math.PI / 2, false);
         ctx.lineTo(centerX, centerY);
@@ -175,6 +176,9 @@
     }
 
     function attachRObserver(callback) {
+        if (rObserverAttached) {
+            return;
+        }
         const rHidden = getRHidden();
         if (!rHidden) {
             return;
@@ -183,6 +187,7 @@
         observer.observe(rHidden, { attributes: true, attributeFilter: ["value"] });
         rHidden.addEventListener("change", callback);
         rHidden.addEventListener("input", callback);
+        rObserverAttached = true;
     }
 
     function hookPrimeFaces(updateFn) {
@@ -300,46 +305,49 @@
         const updateGraphFn = () => updateGraph(ctx, width, height, centerX, centerY);
         updateGraphRef = updateGraphFn;
 
-        canvas.addEventListener("click", function (event) {
-            const r = getRValue();
-            const effectiveR = r || lastKnownR || MAX_R;
-            const rect = canvas.getBoundingClientRect();
-            const localX = event.clientX - rect.left;
-            const localY = event.clientY - rect.top;
-            const px = localX - centerX;
-            const py = centerY - localY;
-            const scale = (BASE_R * (effectiveR / MAX_R)) / effectiveR;
+        if (!canvasListenerAttached) {
+            canvas.addEventListener("click", function (event) {
+                const r = getRValue();
+                const effectiveR = r || lastKnownR || MAX_R;
+                const rect = canvas.getBoundingClientRect();
+                const localX = event.clientX - rect.left;
+                const localY = event.clientY - rect.top;
+                const px = localX - centerX;
+                const py = centerY - localY;
+                const scale = (BASE_R * (effectiveR / MAX_R)) / effectiveR;
 
-            const modelX = px / scale;
-            const modelY = py / scale;
+                const modelX = px / scale;
+                const modelY = py / scale;
 
-            const clampedX = Math.max(-4.999, Math.min(4.999, modelX));
-            const clampedY = Math.max(-4.9, Math.min(4.9, modelY));
+                const clampedX = Math.max(-4.999, Math.min(4.999, modelX));
+                const clampedY = Math.max(-4.9, Math.min(4.9, modelY));
 
-            const xInput = document.getElementById("data-form:x");
-            if (xInput) {
-                xInput.value = clampedX.toFixed(3);
-                xInput.dispatchEvent(new Event("change"));
-            }
-
-            const yInput = document.querySelector("#data-form\\:y input");
-            if (yInput) {
-                yInput.value = clampedY.toFixed(1);
-                yInput.dispatchEvent(new Event("change"));
-            }
-
-            setTimeout(function () {
-                if (typeof submitPointFromCanvas === "function" && (r || lastKnownR)) {
-                    const ensuredR = r || lastKnownR;
-                    persistLastKnownR(ensuredR);
-                    const rHidden = getRHidden();
-                    if (rHidden && (!rHidden.value || rHidden.value.trim() === "")) {
-                        rHidden.value = ensuredR;
-                    }
-                    submitPointFromCanvas();
+                const xInput = document.getElementById("data-form:x");
+                if (xInput) {
+                    xInput.value = clampedX.toFixed(3);
+                    xInput.dispatchEvent(new Event("change"));
                 }
-            }, 100);
-        });
+
+                const yInput = document.querySelector("#data-form\\:y input");
+                if (yInput) {
+                    yInput.value = clampedY.toFixed(1);
+                    yInput.dispatchEvent(new Event("change"));
+                }
+
+                setTimeout(function () {
+                    if (typeof submitPointFromCanvas === "function" && (r || lastKnownR)) {
+                        const ensuredR = r || lastKnownR;
+                        persistLastKnownR(ensuredR);
+                        const rHidden = getRHidden();
+                        if (rHidden && (!rHidden.value || rHidden.value.trim() === "")) {
+                            rHidden.value = ensuredR;
+                        }
+                        submitPointFromCanvas();
+                    }
+                }, 100);
+            });
+            canvasListenerAttached = true;
+        }
 
         attachRObserver(updateGraphFn);
         updateGraphFn();
