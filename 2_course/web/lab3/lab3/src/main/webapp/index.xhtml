@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>лаба 3</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </h:head>
+    <h:body>
+        <nav class="navbar">
+            <div id="info">
+                Ларионов Владислав Васильевич<br/>P3209, 613
+            </div>
+        </nav>
+        
+        <main class="container">
+            <section class="welcome-section">
+                <h:form id="clockForm">
+                    <p:outputPanel id="clockPanel" styleClass="clock-simple">
+                        <h:outputText value="#{clockBean.displayData}"/>
+                        <p:poll interval="6" update="clockPanel" listener="#{clockBean.updateTime}"/>
+                    </p:outputPanel>
+                </h:form>
+                
+                <div class="navigation-link" style="margin-top: 40px;">
+                    <h:link outcome="form" value="Перейти к приложению" 
+                           styleClass="nav-link-button"/>
+                </div>
+            </section>
+        </main>
+    </h:body>
+</html>
