@@ -6,6 +6,7 @@
 [![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
 [![JakartaEE](https://img.shields.io/badge/JakartaEE-9.1-purple.svg)](https://jakarta.ee)
 [![PrimeFaces](https://img.shields.io/badge/PrimeFaces-13.0.4-orange.svg)](https://www.primefaces.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
 [![Kafka](https://img.shields.io/badge/Kafka-3.7.0-black.svg)](https://kafka.apache.org)
 [![Python](https://img.shields.io/badge/Python-3.11+-yellow.svg)](https://www.python.org/)
 
