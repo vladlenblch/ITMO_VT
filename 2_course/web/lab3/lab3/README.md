@@ -3,7 +3,7 @@
 > **Java + PrimeFaces веб-приложение для проверки попадания точки в область и сохранения результатов в БД**
 
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Gradle](https://img.shields.io/badge/Gradle-8+-02303A.svg)](https://gradle.org/)
+[![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
 
 ## 📋 Описание проекта
