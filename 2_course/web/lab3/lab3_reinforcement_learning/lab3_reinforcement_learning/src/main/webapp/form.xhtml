@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>лаба 3</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </h:head>
+    <h:body>
+        <nav class="navbar">
+            <div id="info">
+                Ларионов Владислав Васильевич<br/>P3209, 613
+            </div>
+            <h:link outcome="index" value="На главную" styleClass="navbar-link"/>
+        </nav>
+        
+        <main class="container">
+            <section class="top-section">
+                <div class="input-panel">
+                    <h:form id="data-form">
+                        <div class="form-field-group">
+                            <h:outputLabel for="x" value="Введите X (от -5 до 5):"/>
+                            <h:inputText id="x" value="#{pointBean.x}" 
+                                        required="true" requiredMessage="Введите значение X"
+                                        converter="jakarta.faces.BigDecimal"
+                                        styleClass="ui-inputfield">
+                                <f:validator validatorId="xValidator"/>
+                            </h:inputText>
+                        </div>
+                        
+                        <div class="form-field-group">
+                            <h:outputLabel for="y" value="Введите Y (от -5 до 5):"/>
+                            <p:spinner id="y" value="#{pointBean.y}" 
+                                      min="-5" max="5" 
+                                      stepFactor="0.1"
+                                      decimalPlaces="1"
+                                      required="true" requiredMessage="Введите значение Y">
+                                <f:converter converterId="jakarta.faces.BigDecimal"/>
+                                <f:validator validatorId="yValidator"/>
+                            </p:spinner>
+                        </div>
+                        
+                        <div class="form-field-group">
+                            <h:panelGroup id="loadPanel" layout="block" styleClass="load-panel">
+                                <h:outputText value="Текущая нагрузка:" styleClass="load-label"/>
+                                <h:outputText value="#{resultsBean.requestsPerMinute} req/min" styleClass="load-value"/>
+                                <p:poll interval="1" update="data-form:loadPanel" process="@none"/>
+                            </h:panelGroup>
+                            <h:inputHidden id="rHidden" value="#{pointBean.r}">
+                                <f:converter converterId="jakarta.faces.BigDecimal"/>
+                            </h:inputHidden>
+                        </div>
+                        
+                        <div class="form-field-group">
+                            <p:commandButton value="Проверить" action="#{pointBean.checkPoint}" 
+                                           update="data-form result-table data-form:messages" 
+                                           process="@form" onstart="captureCurrentR();" oncomplete="reinitGraph(30)"/>
+                        </div>
+                        
+                        <p:growl id="messages" widgetVar="messagesWidget" showDetail="true"/>
+                        
+                        <p:remoteCommand name="submitPointFromCanvas" action="#{pointBean.checkPoint}" 
+                                    update="data-form result-table data-form:messages"
+                                    process="@form"
+                                    onstart="captureCurrentR(); window.skipValidationMessages = true;"
+                                    oncomplete="try { if (window.skipValidationMessages &amp;&amp; window.PF) { var g = PF('messagesWidget'); if (g &amp;&amp; typeof g.removeAll === 'function') { g.removeAll(); } else if (g &amp;&amp; typeof g.clear === 'function') { g.clear(); } } } finally { window.skipValidationMessages = false; } reinitGraph(30);"
+                                    onerror="window.skipValidationMessages = false;"
+                                    style="display: none;"/>
+
+                        <h:panelGroup id="error" rendered="#{not empty pointBean.status and pointBean.status != 'success' and pointBean.status != 'Point added successfully!'}">
+                            <h:outputText value="#{pointBean.status}" styleClass="error-text"/>
+                        </h:panelGroup>
+                    </h:form>
+                </div>
+                
+                <h:panelGroup id="graph-panel" layout="block" styleClass="graph-panel">
+                    <canvas id="graph" width="400" height="400" style="display: block;"></canvas>
+                </h:panelGroup>
+            </section>
+            
+            <section class="table-section">
+                <h:dataTable id="result-table" value="#{resultsBean.allResults}" var="point" 
+                            styleClass="result-table" border="1">
+                    <h:column>
+                        <f:facet name="header">X</f:facet>
+                        <h:outputText value="#{point.x}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Y</f:facet>
+                        <h:outputText value="#{point.y}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">R</f:facet>
+                        <h:outputText value="#{point.r}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Время</f:facet>
+                        <h:outputText value="#{point.currentTime}">
+                            <f:convertDateTime pattern="HH:mm:ss" timeZone="GMT+3"/>
+                        </h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Результат</f:facet>
+                        <h:outputText value="#{point.hit ? 'Попадание' : 'Промах'}" 
+                                     styleClass="#{point.hit ? 'hit-row' : 'miss-row'}"/>
+                    </h:column>
+                </h:dataTable>
+            </section>
+        </main>
+        <script src="graph.js"></script>
+    </h:body>
+</html>
