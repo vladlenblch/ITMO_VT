@@ -4,7 +4,6 @@
 
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
 [![Gradle](https://img.shields.io/badge/Gradle-8+-brightgreen.svg)](https://gradle.org)
-[![JakartaEE](https://img.shields.io/badge/JakartaEE-10-purple.svg)](https://jakarta.ee)
 [![Tribuo](https://img.shields.io/badge/Tribuo-4.3.2-orange.svg)](https://tribuo.org)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
 
