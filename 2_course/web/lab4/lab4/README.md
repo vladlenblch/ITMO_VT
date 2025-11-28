@@ -5,7 +5,7 @@
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-DB-blue.svg)](https://www.postgresql.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
 [![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev)
 [![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-State-orange.svg)](https://redux-toolkit.js.org/)
 [![Axios](https://img.shields.io/badge/Axios-HTTP-purple.svg)](https://axios-http.com/)
