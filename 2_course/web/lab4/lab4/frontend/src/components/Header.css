@@ -1,0 +1,37 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: #202d49;
+    color: #f9fafb;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+}
+
+.app-header__identity {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.app-header__label {
+    font-size: 0.75rem;
+    margin: 0;
+    color: #9ca3af;
+}
+
+.app-header__value {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0.25rem 0 0;
+}
+
+@media (max-width: 794px) {
+    .app-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

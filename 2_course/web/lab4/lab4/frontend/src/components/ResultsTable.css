@@ -1,0 +1,45 @@
+.results-table {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.results-table th {
+    text-align: left;
+    color: #6b7280;
+    font-weight: 600;
+    padding: 0.75rem 0.5rem;
+}
+
+.results-table td {
+    padding: 0.75rem 0.5rem;
+    border-top: 1px solid #f3f4f6;
+    color: #111827;
+}
+
+.results-table__placeholder {
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.hit {
+    color: #059669;
+    font-weight: 700;
+}
+
+.miss {
+    color: #dc2626;
+    font-weight: 700;
+}
