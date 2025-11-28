@@ -5,6 +5,7 @@
 [![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
 [![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
 
 ## 📋 Описание проекта
 
