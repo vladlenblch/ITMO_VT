@@ -1,0 +1,76 @@
+.point-controls {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+.point-controls__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.point-controls__group p {
+    margin: 0;
+    font-weight: 700;
+    color: #111827;
+}
+
+.point-controls__radio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.5rem;
+}
+
+.point-controls__radio-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.85rem;
+    cursor: pointer;
+}
+
+.point-controls input[type='radio'] {
+    accent-color: #3b82f6;
+}
+
+.point-controls input[type='text'] {
+    border: 1px solid #d1d5db;
+    border-radius: 0.85rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.point-controls__error {
+    margin: -0.5rem 0;
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.point-controls button {
+    border: none;
+    background: linear-gradient(135deg, #6366f1, #3b82f6);
+    color: #fff;
+    border-radius: 0.9rem;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.point-controls button:disabled {
+    opacity: 0.6;
+    cursor: progress;
+}
+
+.point-controls button:hover {
+    transform: translateY(-2px);
+}

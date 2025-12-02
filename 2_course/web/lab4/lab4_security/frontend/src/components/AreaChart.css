@@ -1,0 +1,11 @@
+.area-chart {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+    text-align: center;
+}
+
+.area-chart svg {
+    cursor: crosshair;
+}
