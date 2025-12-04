@@ -11,6 +11,19 @@ export const credentialsSchema = z.object({
         .max(100, 'Пароль слишком длинный'),
 });
 
+export const loginSchema = z.object({
+    username: z.string()
+        .trim()
+        .min(1, 'Введите логин'),
+    credentialType: z.enum(['password', 'recovery', 'ownership'], {
+        required_error: 'Выберите тип входа',
+        invalid_type_error: 'Некорректный тип входа',
+    }),
+    value: z.string()
+        .trim()
+        .max(200, 'Слишком длинное значение'),
+});
+
 const ALLOWED_X_VALUES = [-4, -3, -2, -1, 0, 1, 2, 3, 4];
 const ALLOWED_R_VALUES = [1, 2, 3, 4];
 const X_RANGE = { min: -4, max: 4 };

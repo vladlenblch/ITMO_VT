@@ -2,7 +2,7 @@ package ru.vladlenblch.points;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
-import ru.vladlenblch.auth.UserEntity;
+import ru.vladlenblch.auth.principal.PrincipalEntity;
 import ru.vladlenblch.points.dto.PointRequest;
 import ru.vladlenblch.points.dto.PointResponse;
 
@@ -15,17 +15,17 @@ public class PointsService {
         this.pointsRepository = pointsRepository;
     }
 
-    public List<PointResponse> findAll(UserEntity user) {
-        return pointsRepository.findAllByUserOrderByTimestampDesc(user)
+    public List<PointResponse> findAll(PrincipalEntity principal) {
+        return pointsRepository.findAllByPrincipalOrderByTimestampDesc(principal)
             .stream()
             .map(this::toResponse)
             .toList();
     }
 
-    public PointResponse create(UserEntity user, PointRequest request) {
+    public PointResponse create(PrincipalEntity principal, PointRequest request) {
         boolean hit = isHit(request.x(), request.y(), request.r());
         PointEntity entity = new PointEntity();
-        entity.setUser(user);
+        entity.setPrincipal(principal);
         entity.setX(request.x());
         entity.setY(request.y());
         entity.setR(request.r());

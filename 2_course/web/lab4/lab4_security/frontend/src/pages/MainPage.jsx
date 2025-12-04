@@ -5,6 +5,7 @@ import PointControls from '../components/PointControls';
 import AreaChart from '../components/AreaChart';
 import ResultsTable from '../components/ResultsTable';
 import LogoutButton from '../components/LogoutButton';
+import CredentialsManager from '../components/CredentialsManager';
 import { fetchResults } from '../features/points/pointsSlice';
 import './MainPage.css';
 
@@ -25,6 +26,7 @@ const MainPage = () => {
                 <PointControls />
                 <AreaChart />
                 <ResultsTable />
+                <CredentialsManager />
             </div>
         </div>
     );

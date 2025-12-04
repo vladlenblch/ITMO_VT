@@ -54,6 +54,8 @@ frontend/
 │   └── components/
 │       ├── AreaChart.css
 │       ├── AreaChart.jsx
+│       ├── CredentialsManager.css
+│       ├── CredentialsManager.jsx
 │       ├── Header.css
 │       ├── Header.jsx
 │       ├── LoginForm.css

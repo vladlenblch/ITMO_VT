@@ -17,6 +17,11 @@
 - **Spring Data JPA**, **JDBC PostgreSQL**
 - **PostgreSQL**
 
+## Аутентификация (Principal/Credential/Evidence)
+- Principal: пользователь с UUID и логином.
+- Credential: способы входа (пароль, 5 одноразовых recovery-кодов, право владения файлом).
+- Evidence: проверка существования на устройстве файла, содержащего сгенерированный токен, соответствующий аккаунту.
+
 ## Структура проекта
 
 ```
@@ -37,12 +42,24 @@ backend/
 │       │   ├── auth/
 │       │   │   ├── AuthController.java
 │       │   │   ├── AuthService.java
-│       │   │   ├── UserEntity.java
-│       │   │   ├── UserRepository.java
+│       │   │   ├── credential/
+│       │   │   │   ├── CredentialEntity.java
+│       │   │   │   ├── CredentialRepository.java
+│       │   │   │   ├── CredentialType.java
+│       │   │   │   ├── CredentialVerifier.java
+│       │   │   │   ├── OwnershipCredentialVerifier.java
+│       │   │   │   ├── PasswordCredentialVerifier.java
+│       │   │   │   └── RecoveryCredentialVerifier.java
+│       │   │   ├── principal/
+│       │   │   │   ├── PrincipalEntity.java
+│       │   │   │   └── PrincipalRepository.java
 │       │   │   └── dto/
+│       │   │       ├── CredentialResponse.java
 │       │   │       ├── LoginRequest.java
 │       │   │       ├── LoginResponse.java
+│       │   │       ├── PasswordRequest.java
 │       │   │       ├── RegisterRequest.java
+│       │   │       ├── RegisterResponse.java
 │       │   │       └── UserDto.java
 │       │   └── points/
 │       │       ├── PointEntity.java

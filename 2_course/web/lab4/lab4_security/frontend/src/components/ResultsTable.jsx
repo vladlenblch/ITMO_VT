@@ -5,11 +5,15 @@ const ResultsTable = () => {
     const { items, status } = useSelector((state) => state.points);
 
     if (status === 'loading') {
-        return <div className="results-table__placeholder">Загружаем историю...</div>;
+        return <div className="results-table results-table__placeholder">Загружаем историю...</div>;
     }
 
     if (!items.length) {
-        return <div className="results-table__placeholder">История проверок будет отображаться здесь</div>;
+        return (
+            <div className="results-table results-table__placeholder">
+                История проверок будет отображаться здесь
+            </div>
+        );
     }
 
     return (

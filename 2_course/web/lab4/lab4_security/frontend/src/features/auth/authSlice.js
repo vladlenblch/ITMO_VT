@@ -51,6 +51,32 @@ export const fetchCurrentUser = createAsyncThunk(
     },
 );
 
+export const listCredentials = createAsyncThunk(
+    'auth/listCredentials',
+    async (_, { rejectWithValue }) => {
+        try {
+            const { data } = await authApi.listCredentials();
+            return data;
+        } catch (error) {
+            const message = error.response?.data?.message || 'Не удалось получить способы входа';
+            return rejectWithValue(message);
+        }
+    },
+);
+
+export const deleteCredential = createAsyncThunk(
+    'auth/deleteCredential',
+    async (id, { rejectWithValue }) => {
+        try {
+            await authApi.deleteCredential(id);
+            return id;
+        } catch (error) {
+            const message = error.response?.data?.message || 'Не удалось удалить способ входа';
+            return rejectWithValue(message);
+        }
+    },
+);
+
 const authSlice = createSlice({
     name: 'auth',
     initialState: {
@@ -58,6 +84,10 @@ const authSlice = createSlice({
         token: tokenFromStorage,
         status: 'idle',
         error: null,
+        recoveryCodes: [],
+        credentials: [],
+        ownershipFilePath: null,
+        ownershipFileContent: null,
     },
     reducers: {
         clearAuthState(state) {
@@ -65,6 +95,10 @@ const authSlice = createSlice({
             state.token = null;
             state.status = 'idle';
             state.error = null;
+            state.recoveryCodes = [];
+            state.credentials = [];
+            state.ownershipFilePath = null;
+            state.ownershipFileContent = null;
             localStorage.removeItem('authToken');
         },
     },
@@ -78,6 +112,9 @@ const authSlice = createSlice({
                 state.status = 'succeeded';
                 state.user = action.payload.user;
                 state.token = action.payload.token;
+                state.recoveryCodes = action.payload.recoveryCodes || [];
+                state.ownershipFilePath = action.payload.ownershipFilePath || null;
+                state.ownershipFileContent = action.payload.ownershipFileContent || null;
                 localStorage.setItem('authToken', action.payload.token);
             })
             .addCase(register.rejected, (state, action) => {
@@ -119,6 +156,12 @@ const authSlice = createSlice({
                 state.token = null;
                 state.status = 'idle';
                 localStorage.removeItem('authToken');
+            })
+            .addCase(listCredentials.fulfilled, (state, action) => {
+                state.credentials = action.payload;
+            })
+            .addCase(deleteCredential.fulfilled, (state, action) => {
+                state.credentials = state.credentials.filter((item) => item.id !== action.payload);
             });
     },
 });

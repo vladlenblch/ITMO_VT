@@ -72,3 +72,45 @@
     padding: 0.25rem 0;
     cursor: pointer;
 }
+
+.login-form__segmented {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    background: #f3f4f6;
+    border-radius: 0.75rem;
+    padding: 0.35rem;
+    grid-auto-rows: 1fr;
+}
+
+.login-form__segmented button {
+    background: transparent;
+    color: #374151;
+    border-radius: 0.6rem;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.login-form__segmented button.active {
+    background: #fff;
+    color: #111827;
+    border-color: #3b82f6;
+}
+
+.login-form__segmented button:nth-child(3) {
+    grid-column: span 2;
+}
+
+.login-form__recovery {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 0.75rem;
+    border-radius: 0.9rem;
+}
+
+.login-form__recovery ul {
+    margin: 0.35rem 0 0;
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.25rem;
+}

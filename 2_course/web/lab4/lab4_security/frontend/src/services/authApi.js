@@ -5,6 +5,9 @@ const authApi = {
     login: (credentials) => apiClient.post('/auth/login', credentials),
     logout: () => apiClient.post('/auth/logout'),
     me: () => apiClient.get('/auth/me'),
+    listCredentials: () => apiClient.get('/auth/credentials'),
+    setPassword: (payload) => apiClient.post('/auth/credentials/password', payload),
+    deleteCredential: (id) => apiClient.delete(`/auth/credentials/${id}`),
 };
 
 export default authApi;

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import ru.vladlenblch.auth.AuthService;
-import ru.vladlenblch.auth.UserEntity;
+import ru.vladlenblch.auth.principal.PrincipalEntity;
 import ru.vladlenblch.points.dto.PointRequest;
 import ru.vladlenblch.points.dto.PointResponse;
 
@@ -28,8 +28,8 @@ public class PointsController {
 
     @GetMapping
     public List<PointResponse> findAll(@RequestHeader(value = "Authorization", required = false) String token) {
-        UserEntity user = requireUser(token);
-        return pointsService.findAll(user);
+        PrincipalEntity principal = requireUser(token);
+        return pointsService.findAll(principal);
     }
 
     @PostMapping
@@ -37,12 +37,12 @@ public class PointsController {
         @RequestHeader(value = "Authorization", required = false) String token,
         @RequestBody PointRequest request
     ) {
-        UserEntity user = requireUser(token);
-        return pointsService.create(user, request);
+        PrincipalEntity principal = requireUser(token);
+        return pointsService.create(principal, request);
     }
 
-    private UserEntity requireUser(String token) {
-        return authService.findUserEntityByToken(token)
+    private PrincipalEntity requireUser(String token) {
+        return authService.findPrincipalByToken(token)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Требуется авторизация"));
     }
 }

@@ -1,7 +1,9 @@
-package ru.vladlenblch.points;
+package ru.vladlenblch.auth.credential;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,47 +15,42 @@ import jakarta.persistence.Table;
 import java.time.Instant;
 import lombok.Getter;
 import lombok.Setter;
-
 import ru.vladlenblch.auth.principal.PrincipalEntity;
 
 @Getter
+@Setter
 @Entity
-@Table(name = "points")
-public class PointEntity {
+@Table(name = "credentials")
+public class CredentialEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Setter
-    @Column(nullable = false)
-    private double x;
-
-    @Setter
-    @Column(nullable = false)
-    private double y;
-
-    @Setter
-    @Column(nullable = false)
-    private double r;
-
-    @Setter
-    @Column(nullable = false)
-    private boolean hit;
-
-    @Setter
-    @Column(nullable = false)
-    private Instant timestamp;
-
-    @Setter
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "principal_id", nullable = false)
     private PrincipalEntity principal;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private CredentialType type;
+
+    @Column(nullable = false)
+    private String secretHash;
+
+    @Column
+    private String displayValue;
+
+    @Column(nullable = false)
+    private boolean used = false;
+
+    @Column(nullable = false, updatable = false)
+    private Instant createdAt;
+
     @PrePersist
-    public void onPersist() {
-        if (timestamp == null) {
-            timestamp = Instant.now();
+    public void onCreate() {
+        if (createdAt == null) {
+            createdAt = Instant.now();
         }
     }
 }

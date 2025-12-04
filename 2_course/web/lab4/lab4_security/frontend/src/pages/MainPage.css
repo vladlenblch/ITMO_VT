@@ -28,7 +28,8 @@
     gap: 1.5rem;
 }
 
-.main-page__grid > :last-child {
+.main-page__grid > :last-child,
+.main-page__grid > .results-table {
     grid-column: span 2;
 }
 
