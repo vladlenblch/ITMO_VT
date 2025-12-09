@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.ppm
+.venv/
+env/
+venv/
+
+# Python packaging / tooling
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage*
+coverage.xml
+
+# .NET / C#
+bin/
+obj/
+*.user
+*.suo
+*.swp
+*.userprefs
+.vs/
