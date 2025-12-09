@@ -5,10 +5,12 @@
 **Windows:**
 - .NET SDK 8.0+
 - gcc/g++ (MinGW или Visual Studio Build Tools)
+- Python 3.12+
 
 **macOS:**
 - .NET SDK 8.0+
 - gcc/g++ (Xcode Command Line Tools)
+- Python 3.12+
 
 ---
 
