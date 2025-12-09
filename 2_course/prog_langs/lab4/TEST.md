@@ -28,7 +28,6 @@ python main.py
 ## macOS
 
 ```bash
-# Подготовка тестовых программ
 # Сборка (из корневой папки)
 dotnet run --project cs_compute
 
