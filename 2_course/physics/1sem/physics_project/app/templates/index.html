@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Проект по физике</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h3>Координаты цели (м)</h3>
+            <div class="coord-row">
+                <label>X:</label>
+                <input type="number" id="target-x" value="4000" min="500" step="1" inputmode="numeric" placeholder=">= 500">
+            </div>
+            <div class="coord-row">
+                <label>Y:</label>
+                <input type="number" id="target-y" value="6000" min="500" step="1" inputmode="numeric" placeholder=">= 500">
+            </div>
+            <div class="coord-row">
+                <label>Z:</label>
+                <input type="number" id="target-z" value="4000" min="500" step="1" inputmode="numeric" placeholder=">= 500">
+            </div>
+            <p id="coord-error" class="helper-text error-text" style="display: none;"></p>
+
+            <h3>Параметры ветра</h3>
+            <label>Скорость (м/с): <span id="ws-val">0</span></label>
+            <input type="range" id="wind-speed" min="0" max="100" value="0">
+
+            <label>Направление (град): <span id="wd-val">0</span></label>
+            <input type="range" id="wind-dir" min="0" max="360" value="0">
+
+            <div class="stat-box">
+                <p>Время: <span id="time-disp">0.00</span> с</p>
+                <p>Высота ракеты: <span id="alt-disp">0</span> м</p>
+                <p>Скорость ракеты: <span id="speed-disp">0.00</span> м/с</p>
+                <p>Дистанция: <span id="dist-disp">---</span> м</p>
+                <p id="min-dist-row" style="display:none">Минимальная дистанция: <span id="min-dist-disp">---</span> м</p>
+                <p id="closest-time-row" style="display:none">Время минимума: <span id="closest-time-disp">---</span> с</p>
+            </div>
+            <button id="calculate-btn" onclick="calculateTrajectory()">Рассчитать траекторию</button>
+
+            <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                <div class="compact-spinner"></div>
+                <span>Вычисление траектории...</span>
+            </div>
+
+            <button id="simulate-btn" onclick="startSimulation()" style="display: none; margin-top: 10px;">
+                Запустить симуляцию
+            </button>
+
+            <p id="calc-duration" class="helper-text" style="margin-top: 8px; display: none;">Время расчета: —</p>
+            
+            <button id="show-calculations-btn" onclick="showCalculationsModal()" style="display: none; margin-top: 10px;">
+                Показать расчеты и формулы
+            </button>
+        </div>
+        <div class="visual">
+            <div id="graph"></div>
+        </div>
+    </div>
+
+    <div id="calculations-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Расчеты и формулы</h2>
+                <span class="close" onclick="closeCalculationsModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="calculations-content">
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

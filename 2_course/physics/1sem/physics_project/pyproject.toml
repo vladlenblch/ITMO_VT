@@ -1,0 +1,13 @@
+[project]
+name = "pvo"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.121.3",
+    "uvicorn>=0.38.0",
+    "numpy>=1.25",
+    "jinja2>=3.1",
+    "websockets>=11.0",
+    "loguru>=0.7"
+]
