@@ -37,6 +37,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             HttpUnitOptions.setExceptionsThrownOnScriptError(false);
+            HttpUnitOptions.setScriptingEnabled(false);
+
             ServletRunner sr = new ServletRunner();
             sr.registerServlet("myServlet", HelloWorld.class.getName());
             ServletUnitClient sc = sr.newClient();
