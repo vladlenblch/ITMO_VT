@@ -37,20 +37,19 @@ public class Main {
     public static void main(String[] args) {
         try {
             HttpUnitOptions.setExceptionsThrownOnScriptError(false);
-            HttpUnitOptions.setScriptingEnabled(false);
-
             ServletRunner sr = new ServletRunner();
             sr.registerServlet("myServlet", HelloWorld.class.getName());
             ServletUnitClient sc = sr.newClient();
             int number = 1;
+            final int maxStoredScriptErrors = 50;
             WebRequest request = new GetMethodWebRequest("http://test.meterware.com/myServlet");
             while (true) {
                 WebResponse response = sc.getResponse(request);
                 System.out.println("Count: " + number++ + response);
-                java.lang.Thread.sleep(200);
+                if (HttpUnitOptions.getScriptErrorMessages().length >= maxStoredScriptErrors) {
+                    HttpUnitOptions.clearScriptErrorMessages();
+                }
             }
-        } catch (InterruptedException ex) {
-            Logger.getLogger("global").log(Level.SEVERE, null, ex);
         } catch (MalformedURLException ex) {
             Logger.getLogger("global").log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
