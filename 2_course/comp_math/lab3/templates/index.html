@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Численное интегрирование</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="terminal">
+      <header class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">lab3 :: численное интегрирование</div>
+      </header>
+
+      <main class="terminal-body">
+        <section class="block">
+          <h2>&gt; Определённые интегралы</h2>
+          <form id="integral-form" class="form-row">
+            <label>
+              функция f(x)
+              <select id="function_key">
+                {% for key, f in functions.items() %}
+                <option
+                  value="{{ key }}"
+                  data-a="{{ f.default_a }}"
+                  data-b="{{ f.default_b }}"
+                >
+                  {{ f.name }}
+                </option>
+                {% endfor %}
+              </select>
+            </label>
+
+            <label>
+              точность ε
+              <input id="eps" type="text" value="0.0001" />
+            </label>
+
+            <label>
+              нижний предел a
+              <input id="a" type="text" />
+            </label>
+
+            <label>
+              верхний предел b
+              <input id="b" type="text" />
+            </label>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">вычислить</button>
+            </div>
+          </form>
+
+          <pre id="integral-output" class="output"></pre>
+        </section>
+
+        <section class="block">
+          <h2>&gt; Несобственные интегралы 2 рода</h2>
+          <form id="improper-form" class="form-row">
+            <label>
+              интеграл
+              <select id="improper_key">
+                {% for key, info in improper_integrals.items() %}
+                <option
+                  value="{{ key }}"
+                  data-a="{{ info.a }}"
+                  data-b="{{ info.b }}"
+                >
+                  {{ info.name }}
+                </option>
+                {% endfor %}
+              </select>
+            </label>
+
+            <label>
+              точность ε
+              <input id="improper_eps" type="text" value="0.0001" />
+            </label>
+
+            <label>
+              нижний предел a
+              <input id="improper_a" type="text" />
+            </label>
+
+            <label>
+              верхний предел b
+              <input id="improper_b" type="text" />
+            </label>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">вычислить</button>
+            </div>
+          </form>
+
+          <pre id="improper-output" class="output"></pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

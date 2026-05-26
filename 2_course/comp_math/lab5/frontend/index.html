@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Расчет значений функции методами Лагранжа, Ньютона и Гаусса." />
+    <title>ЛР5</title>
+    <link rel="stylesheet" href="/styles.css?v=5" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="control-panel">
+        <section class="panel-block">
+          <h2>Источник</h2>
+          <div class="segmented" role="tablist" aria-label="Источник данных">
+            <button class="mode-button active" type="button" data-mode="variant">Таблица</button>
+            <button class="mode-button" type="button" data-mode="function">Функция</button>
+          </div>
+
+          <div class="source-pane active" data-pane="variant">
+            <div class="variant-summary">
+              <dl>
+                <div>
+                  <dt>X1</dt>
+                  <dd>1.852</dd>
+                </div>
+                <div>
+                  <dt>X2</dt>
+                  <dd>1.652</dd>
+                </div>
+                <div>
+                  <dt>h</dt>
+                  <dd>0.15</dd>
+                </div>
+              </dl>
+              <div class="variant-editor">
+                <table class="variant-table" aria-label="Исходные узлы варианта">
+                  <thead>
+                    <tr><th>x</th><th>y</th><th></th></tr>
+                  </thead>
+                  <tbody id="variantTableBody"></tbody>
+                </table>
+                <div class="table-actions">
+                  <button type="button" id="addRowButton">Добавить строку</button>
+                  <button type="button" id="resetRowsButton">Сбросить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="source-pane" data-pane="function">
+            <label>
+              Функция
+              <select id="functionSelect"></select>
+            </label>
+            <div class="input-grid">
+              <label>
+                a
+                <input id="leftInput" type="number" step="any" value="0" />
+              </label>
+              <label>
+                b
+                <input id="rightInput" type="number" step="any" value="1.2" />
+              </label>
+              <label>
+                n
+                <input id="countInput" type="number" min="2" step="1" value="7" />
+              </label>
+            </div>
+            <div class="variant-editor">
+              <table class="variant-table" aria-label="Узлы функции">
+                <thead>
+                  <tr><th>x</th></tr>
+                </thead>
+                <tbody id="functionTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-block">
+          <h2>Аргумент</h2>
+          <label>
+            x
+            <input id="targetInput" type="number" step="any" value="1.652" />
+          </label>
+        </section>
+
+        <div class="action-area">
+          <button class="primary-action" type="button" id="calculateButton">Рассчитать</button>
+          <p class="status" id="statusLine"></p>
+        </div>
+      </section>
+
+      <section class="workbench">
+        <div class="topline">
+          <div class="metric-strip" id="metricStrip"></div>
+        </div>
+
+        <div class="chart-tabs" id="chartTabs" aria-label="Выбор графика"></div>
+
+        <section class="chart-frame">
+          <svg id="chart" viewBox="0 0 960 420" role="img" aria-label="График результата"></svg>
+        </section>
+
+        <section class="data-grid">
+          <article class="result-card">
+            <h3>Результаты методов</h3>
+            <div class="table-wrap">
+              <table id="resultTable"></table>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <h3>Конечные разности</h3>
+            <div class="table-wrap">
+              <table id="finiteTable"></table>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js?v=5"></script>
+  </body>
+</html>
