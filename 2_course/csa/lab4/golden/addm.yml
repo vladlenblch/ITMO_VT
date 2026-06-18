@@ -1,0 +1,163 @@
+in_source: |-
+  variable factor
+
+  : main
+      4 factor store
+      5 addm factor
+      48 + write-char
+  ;
+in_stdin: |-
+in_limit: 10000
+out_code: !!binary |
+  KQABABEKKgAAAAQaEQoqAAAAARoZEhYPFxASFg8XEBEKKgAAAAUaJgABGhEKKgAAADAaARsSFxAl
+  /wISFg8XECM=
+out_code_hex: |-
+  0 - 290001 - CALL 1
+  3 - 00 - HALT
+  4 - 11 - SP_INC
+  5 - 0A - MOV_NOS_TOS
+  6 - 2A00000004 - LDI 4
+  11 - 1A - STORE_SP_TOS
+  12 - 11 - SP_INC
+  13 - 0A - MOV_NOS_TOS
+  14 - 2A00000001 - LDI 1
+  19 - 1A - STORE_SP_TOS
+  20 - 19 - STORE
+  21 - 12 - SP_DEC
+  22 - 16 - LOAD_SP
+  23 - 0F - MOV_TOS_MDR
+  24 - 17 - LOAD_SP_M1
+  25 - 10 - MOV_NOS_MDR
+  26 - 12 - SP_DEC
+  27 - 16 - LOAD_SP
+  28 - 0F - MOV_TOS_MDR
+  29 - 17 - LOAD_SP_M1
+  30 - 10 - MOV_NOS_MDR
+  31 - 11 - SP_INC
+  32 - 0A - MOV_NOS_TOS
+  33 - 2A00000005 - LDI 5
+  38 - 1A - STORE_SP_TOS
+  39 - 260001 - ADDM 0x0001
+  42 - 1A - STORE_SP_TOS
+  43 - 11 - SP_INC
+  44 - 0A - MOV_NOS_TOS
+  45 - 2A00000030 - LDI 48
+  50 - 1A - STORE_SP_TOS
+  51 - 01 - ADD
+  52 - 1B - STORE_SP_M1_TOS
+  53 - 12 - SP_DEC
+  54 - 17 - LOAD_SP_M1
+  55 - 10 - MOV_NOS_MDR
+  56 - 25FF02 - STOREA 0xFF02
+  59 - 12 - SP_DEC
+  60 - 16 - LOAD_SP
+  61 - 0F - MOV_TOS_MDR
+  62 - 17 - LOAD_SP_M1
+  63 - 10 - MOV_NOS_MDR
+  64 - 23 - RET
+out_data: !!binary |
+  AAAAAAAAAAA=
+out_data_hex: |-
+  0 - 00000000 - 0
+  1 - 00000000 - 0
+out_interrupts: |
+out_stdout: |
+  9
+  ticks: 96
+out_log: |
+  tick=00001 state=FETCH_OPCODE         pc=0001 ir=CALL            arg=          0 tos=          0 nos=          0 sp=CFFF rp=DFFF tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=0
+  tick=00002 state=FETCH_ARGUMENT       pc=0003 ir=CALL            arg=          1 tos=          0 nos=          0 sp=CFFF rp=DFFF tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- CALL 1
+  tick=00003 state=EXECUTE              pc=0003 ir=CALL            arg=          1 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- CALL prepare
+  tick=00004 state=EXECUTE              pc=0004 ir=CALL            arg=          1 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- CALL
+  tick=00005 state=FETCH_OPCODE         pc=0005 ir=SP_INC          arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=4
+  tick=00006 state=EXECUTE              pc=0005 ir=SP_INC          arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_INC
+  tick=00007 state=FETCH_OPCODE         pc=0006 ir=MOV_NOS_TOS     arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=5
+  tick=00008 state=EXECUTE              pc=0006 ir=MOV_NOS_TOS     arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_TOS
+  tick=00009 state=FETCH_OPCODE         pc=0007 ir=LDI             arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=6
+  tick=00010 state=FETCH_ARGUMENT       pc=000B ir=LDI             arg=          4 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI 4
+  tick=00011 state=EXECUTE              pc=000B ir=LDI             arg=          4 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI
+  tick=00012 state=FETCH_OPCODE         pc=000C ir=STORE_SP_TOS    arg=          0 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=11
+  tick=00013 state=EXECUTE              pc=000C ir=STORE_SP_TOS    arg=          0 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STORE_SP_TOS
+  tick=00014 state=FETCH_OPCODE         pc=000D ir=SP_INC          arg=          0 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=12
+  tick=00015 state=EXECUTE              pc=000D ir=SP_INC          arg=          0 tos=          4 nos=          0 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_INC
+  tick=00016 state=FETCH_OPCODE         pc=000E ir=MOV_NOS_TOS     arg=          0 tos=          4 nos=          0 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=13
+  tick=00017 state=EXECUTE              pc=000E ir=MOV_NOS_TOS     arg=          0 tos=          4 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_TOS
+  tick=00018 state=FETCH_OPCODE         pc=000F ir=LDI             arg=          0 tos=          4 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=14
+  tick=00019 state=FETCH_ARGUMENT       pc=0013 ir=LDI             arg=          1 tos=          4 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI 1
+  tick=00020 state=EXECUTE              pc=0013 ir=LDI             arg=          1 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI
+  tick=00021 state=FETCH_OPCODE         pc=0014 ir=STORE_SP_TOS    arg=          0 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=19
+  tick=00022 state=EXECUTE              pc=0014 ir=STORE_SP_TOS    arg=          0 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STORE_SP_TOS
+  tick=00023 state=FETCH_OPCODE         pc=0015 ir=STORE           arg=          0 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=20
+  tick=00024 state=EXECUTE              pc=0015 ir=STORE           arg=          0 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STORE
+  tick=00025 state=FETCH_OPCODE         pc=0016 ir=SP_DEC          arg=          0 tos=          1 nos=          4 sp=D001 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=21
+  tick=00026 state=EXECUTE              pc=0016 ir=SP_DEC          arg=          0 tos=          1 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_DEC
+  tick=00027 state=FETCH_OPCODE         pc=0017 ir=LOAD_SP         arg=          0 tos=          1 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=22
+  tick=00028 state=MEM_READ             pc=0017 ir=LOAD_SP         arg=          0 tos=          1 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- addr=D000
+  tick=00029 state=FETCH_OPCODE         pc=0018 ir=MOV_TOS_MDR     arg=          0 tos=          1 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=23
+  tick=00030 state=EXECUTE              pc=0018 ir=MOV_TOS_MDR     arg=          0 tos=          4 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- MOV_TOS_MDR
+  tick=00031 state=FETCH_OPCODE         pc=0019 ir=LOAD_SP_M1      arg=          0 tos=          4 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=24
+  tick=00032 state=MEM_READ             pc=0019 ir=LOAD_SP_M1      arg=          0 tos=          4 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFF
+  tick=00033 state=FETCH_OPCODE         pc=001A ir=MOV_NOS_MDR     arg=          0 tos=          4 nos=          4 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=25
+  tick=00034 state=EXECUTE              pc=001A ir=MOV_NOS_MDR     arg=          0 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_MDR
+  tick=00035 state=FETCH_OPCODE         pc=001B ir=SP_DEC          arg=          0 tos=          4 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=26
+  tick=00036 state=EXECUTE              pc=001B ir=SP_DEC          arg=          0 tos=          4 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_DEC
+  tick=00037 state=FETCH_OPCODE         pc=001C ir=LOAD_SP         arg=          0 tos=          4 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=27
+  tick=00038 state=MEM_READ             pc=001C ir=LOAD_SP         arg=          0 tos=          4 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFF
+  tick=00039 state=FETCH_OPCODE         pc=001D ir=MOV_TOS_MDR     arg=          0 tos=          4 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=28
+  tick=00040 state=EXECUTE              pc=001D ir=MOV_TOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_TOS_MDR
+  tick=00041 state=FETCH_OPCODE         pc=001E ir=LOAD_SP_M1      arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=29
+  tick=00042 state=MEM_READ             pc=001E ir=LOAD_SP_M1      arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFE
+  tick=00043 state=FETCH_OPCODE         pc=001F ir=MOV_NOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=30
+  tick=00044 state=EXECUTE              pc=001F ir=MOV_NOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_MDR
+  tick=00045 state=FETCH_OPCODE         pc=0020 ir=SP_INC          arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=31
+  tick=00046 state=EXECUTE              pc=0020 ir=SP_INC          arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_INC
+  tick=00047 state=FETCH_OPCODE         pc=0021 ir=MOV_NOS_TOS     arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=32
+  tick=00048 state=EXECUTE              pc=0021 ir=MOV_NOS_TOS     arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_TOS
+  tick=00049 state=FETCH_OPCODE         pc=0022 ir=LDI             arg=          0 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=33
+  tick=00050 state=FETCH_ARGUMENT       pc=0026 ir=LDI             arg=          5 tos=          0 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI 5
+  tick=00051 state=EXECUTE              pc=0026 ir=LDI             arg=          5 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- LDI
+  tick=00052 state=FETCH_OPCODE         pc=0027 ir=STORE_SP_TOS    arg=          0 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=38
+  tick=00053 state=EXECUTE              pc=0027 ir=STORE_SP_TOS    arg=          0 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STORE_SP_TOS
+  tick=00054 state=FETCH_OPCODE         pc=0028 ir=ADDM            arg=          0 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=39
+  tick=00055 state=FETCH_ARGUMENT       pc=002A ir=ADDM            arg=          1 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- ADDM 0x0001
+  tick=00056 state=MEM_READ             pc=002A ir=ADDM            arg=          1 tos=          5 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- addr=0001
+  tick=00057 state=EXECUTE              pc=002A ir=ADDM            arg=          1 tos=          9 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- ADDM
+  tick=00058 state=FETCH_OPCODE         pc=002B ir=STORE_SP_TOS    arg=          0 tos=          9 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=42
+  tick=00059 state=EXECUTE              pc=002B ir=STORE_SP_TOS    arg=          0 tos=          9 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- STORE_SP_TOS
+  tick=00060 state=FETCH_OPCODE         pc=002C ir=SP_INC          arg=          0 tos=          9 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=43
+  tick=00061 state=EXECUTE              pc=002C ir=SP_INC          arg=          0 tos=          9 nos=          0 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- SP_INC
+  tick=00062 state=FETCH_OPCODE         pc=002D ir=MOV_NOS_TOS     arg=          0 tos=          9 nos=          0 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=44
+  tick=00063 state=EXECUTE              pc=002D ir=MOV_NOS_TOS     arg=          0 tos=          9 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- MOV_NOS_TOS
+  tick=00064 state=FETCH_OPCODE         pc=002E ir=LDI             arg=          0 tos=          9 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=45
+  tick=00065 state=FETCH_ARGUMENT       pc=0032 ir=LDI             arg=         48 tos=          9 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- LDI 48
+  tick=00066 state=EXECUTE              pc=0032 ir=LDI             arg=         48 tos=         48 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- LDI
+  tick=00067 state=FETCH_OPCODE         pc=0033 ir=STORE_SP_TOS    arg=          0 tos=         48 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=50
+  tick=00068 state=EXECUTE              pc=0033 ir=STORE_SP_TOS    arg=          0 tos=         48 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- STORE_SP_TOS
+  tick=00069 state=FETCH_OPCODE         pc=0034 ir=ADD             arg=          0 tos=         48 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=51
+  tick=00070 state=EXECUTE              pc=0034 ir=ADD             arg=          0 tos=         57 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- ADD
+  tick=00071 state=FETCH_OPCODE         pc=0035 ir=STORE_SP_M1_TOS arg=          0 tos=         57 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=52
+  tick=00072 state=EXECUTE              pc=0035 ir=STORE_SP_M1_TOS arg=          0 tos=         57 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- STORE_SP_M1_TOS
+  tick=00073 state=FETCH_OPCODE         pc=0036 ir=SP_DEC          arg=          0 tos=         57 nos=          9 sp=D001 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=53
+  tick=00074 state=EXECUTE              pc=0036 ir=SP_DEC          arg=          0 tos=         57 nos=          9 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- SP_DEC
+  tick=00075 state=FETCH_OPCODE         pc=0037 ir=LOAD_SP_M1      arg=          0 tos=         57 nos=          9 sp=D000 rp=E000 tmp=          0 mdr=          4 flags=zncvieint mode=main      input=-- instr_addr=54
+  tick=00076 state=MEM_READ             pc=0037 ir=LOAD_SP_M1      arg=          0 tos=         57 nos=          9 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFF
+  tick=00077 state=FETCH_OPCODE         pc=0038 ir=MOV_NOS_MDR     arg=          0 tos=         57 nos=          9 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=55
+  tick=00078 state=EXECUTE              pc=0038 ir=MOV_NOS_MDR     arg=          0 tos=         57 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_MDR
+  tick=00079 state=FETCH_OPCODE         pc=0039 ir=STOREA          arg=          0 tos=         57 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=56
+  tick=00080 state=FETCH_ARGUMENT       pc=003B ir=STOREA          arg=      65282 tos=         57 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STOREA 0xFF02
+  tick=00081 state=EXECUTE              pc=003B ir=STOREA          arg=      65282 tos=         57 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- STOREA
+  tick=00082 state=FETCH_OPCODE         pc=003C ir=SP_DEC          arg=          0 tos=         57 nos=          0 sp=D000 rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=59
+  tick=00083 state=EXECUTE              pc=003C ir=SP_DEC          arg=          0 tos=         57 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- SP_DEC
+  tick=00084 state=FETCH_OPCODE         pc=003D ir=LOAD_SP         arg=          0 tos=         57 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=60
+  tick=00085 state=MEM_READ             pc=003D ir=LOAD_SP         arg=          0 tos=         57 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFF
+  tick=00086 state=FETCH_OPCODE         pc=003E ir=MOV_TOS_MDR     arg=          0 tos=         57 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=61
+  tick=00087 state=EXECUTE              pc=003E ir=MOV_TOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_TOS_MDR
+  tick=00088 state=FETCH_OPCODE         pc=003F ir=LOAD_SP_M1      arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=62
+  tick=00089 state=MEM_READ             pc=003F ir=LOAD_SP_M1      arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- addr=CFFE
+  tick=00090 state=FETCH_OPCODE         pc=0040 ir=MOV_NOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=63
+  tick=00091 state=EXECUTE              pc=0040 ir=MOV_NOS_MDR     arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- MOV_NOS_MDR
+  tick=00092 state=FETCH_OPCODE         pc=0041 ir=RET             arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          0 flags=zncvieint mode=main      input=-- instr_addr=64
+  tick=00093 state=MEM_READ             pc=0041 ir=RET             arg=          0 tos=          0 nos=          0 sp=CFFF rp=E000 tmp=          0 mdr=          3 flags=zncvieint mode=main      input=-- addr=E000
+  tick=00094 state=EXECUTE              pc=0003 ir=RET             arg=          0 tos=          0 nos=          0 sp=CFFF rp=DFFF tmp=          0 mdr=          3 flags=zncvieint mode=main      input=-- RET
+  tick=00095 state=FETCH_OPCODE         pc=0004 ir=HALT            arg=          0 tos=          0 nos=          0 sp=CFFF rp=DFFF tmp=          0 mdr=          3 flags=zncvieint mode=main      input=-- instr_addr=3
+  tick=00096 state=EXECUTE              pc=0004 ir=HALT            arg=          0 tos=          0 nos=          0 sp=CFFF rp=DFFF tmp=          0 mdr=          3 flags=zncvieint mode=main      input=-- HALT

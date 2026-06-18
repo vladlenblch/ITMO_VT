@@ -1,0 +1,23 @@
+limit: 1000
+memory_size: 0x1000
+
+memory_mapped_io:
+  0x80: [4321]
+  0x84: []
+
+reports:
+  - name: "Debug Info"
+    slice: all
+    view: |
+      pc: {pc:hex} {pc:label}
+      instr: {instruction}
+      T0: {T0:dec} T2: {T2:dec} T3: {T3:dec} T5: {T5:dec}
+
+  - name: "Result Verification"
+    slice: last
+    view: |
+      numio[0x80]: {io:0x80:dec}
+      numio[0x84]: {io:0x84:dec}
+    assert: |
+      numio[0x80]: [] >>> []
+      numio[0x84]: [] >>> [10]

@@ -1,0 +1,22 @@
+name: upper_case_сstr
+limit: 1000
+memory_size: 0x1100
+memory_mapped_io:
+  0x80: [72,101,108,108,111,10]
+  0x84: []
+reports:
+  - name: Step-by-step
+    slice: all
+    view: |
+      T {T:hex} A {A:hex} S {S:hex} B {B:hex} R {R}
+      {pc}: {instruction} {pc:label}
+  - name: Result
+    slice: last
+    filter:
+      - state
+    view: |
+      numio[0x80]: {io:0x80:dec}
+      numio[0x84]: {io:0x84:dec}
+    assert: |
+      numio[0x80]: [] >>> []
+      numio[0x84]: [] >>> [72,69,76,76,79]
