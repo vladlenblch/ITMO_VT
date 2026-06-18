@@ -1,22 +1,22 @@
-# 🎯 Point-in-Area + RL Agent
+# 🎯 Лабораторная работа №3
 
 > **Веб-приложение на JSF, проверяющее попадание точки в область и получающее рекомендуемый радиус от агента обучения с подкреплением через Kafka**
 
-[![Java](https://img.shields.io/badge/Java-17-blue.svg)](https://www.java.com/)
-[![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
-[![Kafka](https://img.shields.io/badge/Kafka-3.7.0-black.svg)](https://kafka.apache.org)
-[![Python](https://img.shields.io/badge/Python-3.11+-yellow.svg)](https://www.python.org/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat&logo=apachekafka&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 ## 📋 Описание проекта
 
-JSF-приложение c PrimeFaces отображает интерактивный график и форму, принимает координаты кликом или вводом и сохраняет результат в PostgreSQL. Каждые пять запросов бэкенд отправляет в Kafka статистику последних десяти попаданий, а отдельный Python-агент с Q-learning (Reinforcement Learning) принимает решение, как скорректировать радиус R и публикует новое значение обратно. UI берет рекомендацию, показывает текущую нагрузку на БД.
+JSF-приложение с PrimeFaces отображает интерактивный график и форму, принимает координаты кликом или вводом и сохраняет результат в PostgreSQL. Каждые пять запросов бэкенд отправляет в Kafka статистику последних десяти попаданий, а отдельный Python-агент с Q-learning (Reinforcement Learning) принимает решение, как скорректировать радиус R и публикует новое значение обратно. UI берет рекомендацию, показывает текущую нагрузку на БД.
 
 **Реализация:**
 - Хранение истории запросов в PostgreSQL, метрика запросов в минуту
-- Kafka-интеграция: отправка состояния, приём действия с новым R
+- Kafka-интеграция: отправка состояния, прием действия с новым R
 - PrimeFaces компоненты
-- Python-агент: Q-таблица, epsilon-greedy policy, расчёт награды и отправка действий
+- Python-агент: Q-таблица, epsilon-greedy policy, расчет награды и отправка действий
 
 ## Стек
 

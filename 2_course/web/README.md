@@ -2,16 +2,17 @@
 
 > **Сборник лабораторных работ и дополнительных заданий по веб-программированию**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Gradle](https://img.shields.io/badge/Gradle-8+-green.svg)](https://gradle.org)
-[![Maven](https://img.shields.io/badge/Maven-3+-blueviolet.svg)](https://maven.apache.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
-[![HTML5](https://img.shields.io/badge/HTML5-Canvas-orange.svg)](https://developer.mozilla.org/)
-[![CSS3](https://img.shields.io/badge/CSS3-Responsive-blue.svg)](https://developer.mozilla.org/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 ## 📋 О проекте
 
-Данная папка содержит коллекцию лабораторных работ по курсу "Веб-программирование", охватывающих работу с FastCgi, сервлетами, JSP, JSF, Jakarta EE, Spring Boot и React.
+Данная папка содержит коллекцию лабораторных работ по курсу "Веб-программирование", охватывающих работу с FastCGI, сервлетами, JSP, JSF, Jakarta EE, Spring Boot и React.
 
 ## 👤 Автор
 

@@ -1,8 +1,8 @@
-# 🎯 Assembly Program Analysis
+# 🎯 Лабораторная работа №2
 
 > **Лабораторная работа по анализу программы на ассемблере**
 
-[![Assembly](https://img.shields.io/badge/Assembly-Programming-blue.svg)](https://en.wikipedia.org/wiki/Assembly_language)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -3,9 +3,7 @@
 
 > **C приложение для шифрования и дешифрования текста с использованием шифра Цезаря**
 
-![C Version](https://img.shields.io/badge/C-C11%2B-00599C?style=for-the-badge&logo=c)
-![GCC](https://img.shields.io/badge/GCC-7.0%2B-FF6600?style=for-the-badge&logo=gnu)
-![Clang](https://img.shields.io/badge/Clang-6.0%2B-FF6600?style=for-the-badge&logo=llvm)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black)
 
 ## 📋 Описание проекта
 

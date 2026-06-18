@@ -1,14 +1,12 @@
-# 🎯 Point-in-Area Checker
+# 🎯 Лабораторная работа №4
 
-> **React + Spring Boot веб-приложение для проверки попадания точки в область с авторизацией и историей в Postgres**
+> **React + Spring Boot веб-приложение для проверки попадания точки в область с авторизацией и историей в PostgreSQL**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev)
-[![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-State-orange.svg)](https://redux-toolkit.js.org/)
-[![Axios](https://img.shields.io/badge/Axios-HTTP-purple.svg)](https://axios-http.com/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 
 ## 📋 Описание проекта
 

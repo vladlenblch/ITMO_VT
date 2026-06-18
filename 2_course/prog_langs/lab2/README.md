@@ -2,9 +2,7 @@
 
 > **C# приложение для управления записями о покупках с использованием бинарного дерева поиска**
 
-![C#](https://img.shields.io/badge/C%23-.NET%208.0-239120?style=for-the-badge&logo=c-sharp)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
-![LINQ](https://img.shields.io/badge/LINQ-Query-FF6F00?style=for-the-badge&logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
 
 ## 📋 Описание проекта
 

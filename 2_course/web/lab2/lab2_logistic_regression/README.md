@@ -1,11 +1,11 @@
-# 🎯 Point-in-Area + LogReg
+# 🎯 Лабораторная работа №2
 
 > **Веб-приложение, проверяющее попадание точки в область и прогнозирующее шанс попадания через логистическую регрессию**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Gradle](https://img.shields.io/badge/Gradle-8+-brightgreen.svg)](https://gradle.org)
-[![Tribuo](https://img.shields.io/badge/Tribuo-4.3.2-orange.svg)](https://tribuo.org)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 ## 📋 Описание проекта
 
@@ -39,7 +39,6 @@ lab2_logistic_regression/
 ├── build.gradle.kts
 ├── settings.gradle.kts
 ├── gradle/
-├── build/
 ├── src/
 │   └── main/
 │       ├── java/

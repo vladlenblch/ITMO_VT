@@ -1,8 +1,6 @@
-# 🎯 Microprogramming and Command Synthesis
+# 🎯 Лабораторная работа №7
 
 > **Лабораторная работа по синтезу микрокоманд и разработке тестовых программ**
-
-[![Microprogramming](https://img.shields.io/badge/Microprogramming-Synthesis-blue.svg)](https://en.wikipedia.org/wiki/Microprogramming)
 
 ## 📋 Описание проекта
 

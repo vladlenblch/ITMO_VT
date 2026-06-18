@@ -1,8 +1,8 @@
-# 🎯 Database Design
+# 🎯 Лабораторная работа №1
 
 > **Проектирование и реализация реляционной базы данных для предметной области "Природные явления"**
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://www.postgresql.org/)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 ## 📋 Описание проекта
 

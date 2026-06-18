@@ -1,8 +1,8 @@
-# 🎯 Database Design
+# 🎯 Лабораторная работа №3
 
 > **Нормализация базы данных и создание триггеров**
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://www.postgresql.org/)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 ## 📋 Описание проекта
 

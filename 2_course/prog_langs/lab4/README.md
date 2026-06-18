@@ -2,9 +2,8 @@
 
 > **Потоковая визуализация фрактала Коллатца: C# генерирует кадры, Python отображает с FPS**
 
-![C#](https://img.shields.io/badge/C%23-.NET%208.0-239120?style=for-the-badge&logo=c-sharp)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -1,8 +1,8 @@
-# 🎯 Interrupt Programming in Assembly
+# 🎯 Лабораторная работа №6
 
 > **Лабораторная работа по программированию обработки прерываний на ассемблере**
 
-[![Assembly](https://img.shields.io/badge/Assembly-Interrupts-purple.svg)](https://en.wikipedia.org/wiki/Interrupt)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -1,4 +1,6 @@
-### ОПИ Lab2 - Вариант 23455
+# 🎯 Лабораторная работа №2
+
+- Вариант: 23455
 
 #### Задание
 ![image alt](https://github.com/sshubuntu/OPI_lab2/blob/fe137f6c5a06f996b80ec3bdf7cfadff0cdb6940/variant.png)
@@ -10,7 +12,7 @@
 
 #### Запуск
 ```bash
-# Склонить репозиторий
+# Клонировать репозиторий
 git clone https://github.com/sshubuntu/OPI_lab2
 
 # Запуск git

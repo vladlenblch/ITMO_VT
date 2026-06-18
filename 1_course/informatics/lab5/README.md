@@ -1,10 +1,8 @@
-# 🎯 Binary Arithmetic Analyzer
+# 🎯 Лабораторная работа №5
 
 > **Программа для анализа арифметических операций с двоичными числами и построения графиков**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![Excel](https://img.shields.io/badge/Excel-Data%20Analysis-green)](https://www.microsoft.com/excel)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5+-orange)](https://matplotlib.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

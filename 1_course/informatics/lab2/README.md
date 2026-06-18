@@ -1,8 +1,8 @@
-# 🎯 Hamming Code Error Detector
+# 🎯 Лабораторная работа №2
 
 > **Программа для обнаружения и исправления ошибок в коде Хэмминга**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

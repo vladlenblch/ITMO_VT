@@ -1,8 +1,8 @@
-# 🎯 Number System Converter
+# 🎯 Лабораторная работа №1
 
 > **Программа для перевода чисел между различными системами счисления**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

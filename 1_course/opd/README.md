@@ -2,10 +2,8 @@
 
 > **Сборник лабораторных работ по ОПД**
 
-[![Bash](https://img.shields.io/badge/Bash-Scripting-green.svg)](https://www.gnu.org/software/bash/)
-[![Assembly](https://img.shields.io/badge/Assembly-Programming-blue.svg)](https://en.wikipedia.org/wiki/Assembly_language)
-[![Linux](https://img.shields.io/badge/Linux-System%20Operations-orange.svg)](https://www.linux.org/)
-[![Microprogramming](https://img.shields.io/badge/Microprogramming-Synthesis-purple.svg)](https://en.wikipedia.org/wiki/Microprogramming)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 О проекте
 

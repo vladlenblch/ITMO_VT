@@ -30,7 +30,7 @@
 | 1 | Веб-программирование | [`web/`](2_course/web/) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |
 | 1-2 | Физика | [`physics/`](2_course/physics/) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
 | 2 | Вычислительная математика | [`comp_math/`](2_course/comp_math/) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
-| 2 | Основы компьютерной инженерии | [`cse/`](2_course/cse/) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
+| 2 | Основы программной инженерии | [`cse/`](2_course/cse/) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) |
 
 ## Напоминание
 

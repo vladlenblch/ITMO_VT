@@ -2,7 +2,7 @@
 
 > **Сборник лабораторных работ по базам данных**
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://www.postgresql.org/)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 ## 📋 О проекте
 

@@ -1,11 +1,10 @@
 # 🎯 Point-in-Area Checker Backend
 
-> **REST API на Spring Boot бэкенд с PostgreSQL**
+> **REST API-бэкенд на Spring Boot с PostgreSQL**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.0-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 ## Стек
 
@@ -26,7 +25,6 @@
 
 ```
 backend/
-├── build/
 ├── build.gradle.kts
 ├── gradle.properties
 ├── settings.gradle.kts

@@ -1,8 +1,8 @@
-# 🎯 Assembly Program Analysis with Arrays
+# 🎯 Лабораторная работа №3
 
 > **Лабораторная работа по анализу программы на ассемблере с обработкой массивов**
 
-[![Assembly](https://img.shields.io/badge/Assembly-Arrays-green.svg)](https://en.wikipedia.org/wiki/Assembly_language)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -1,8 +1,8 @@
-# 🎯 Regular Expressions Processor
+# 🎯 Лабораторная работа №3
 
 > **Программа для работы с регулярными выражениями и обработки текстовых данных**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -1,8 +1,8 @@
 # 📚 Вычислительная математика - Комплекс лабораторных работ
 
-> **Сборник лабораторных работ и дополнительных заданий по Вычислительной математике**
+> **Сборник лабораторных работ и дополнительных заданий по вычислительной математике**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 О проекте
 

@@ -1,8 +1,8 @@
-# 🎯 File System Operations in Linux
+# 🎯 Лабораторная работа №1
 
 > **Лабораторная работа по работе с файловой системой Linux**
 
-[![Bash](https://img.shields.io/badge/Bash-Scripting-green.svg)](https://www.gnu.org/software/bash/)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
 
 ## 📋 Описание проекта
 

@@ -2,10 +2,7 @@
 
 > **Сборник аннотаций, лабораторных работ и дополнительных заданий по информатике**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5+-orange)](https://matplotlib.org/)
-[![Excel](https://img.shields.io/badge/Excel-Data%20Analysis-green)](https://www.microsoft.com/excel)
-[![LaTeX](https://img.shields.io/badge/LaTeX-Document%20Preparation-blue)](https://www.latex-project.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 О проекте
 

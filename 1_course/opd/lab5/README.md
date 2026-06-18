@@ -1,8 +1,8 @@
-# 🎯 Input/Output Operations in Assembly
+# 🎯 Лабораторная работа №5
 
 > **Лабораторная работа по работе с устройствами ввода-вывода на ассемблере**
 
-[![Assembly](https://img.shields.io/badge/Assembly-IO-red.svg)](https://en.wikipedia.org/wiki/Assembly_language)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 Описание проекта
 

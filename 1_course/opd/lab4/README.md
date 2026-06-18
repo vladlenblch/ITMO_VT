@@ -1,8 +1,8 @@
-# 🎯 Assembly Program with Subroutines
+# 🎯 Лабораторная работа №4
 
 > **Лабораторная работа по анализу программного комплекса на ассемблере с подпрограммами**
 
-[![Assembly](https://img.shields.io/badge/Assembly-Subroutines-orange.svg)](https://en.wikipedia.org/wiki/Assembly_language)
+![Assembly](https://img.shields.io/badge/Assembly-6E4C13?style=flat&logo=assemblyscript&logoColor=white)
 
 ## 📋 Описание проекта
 

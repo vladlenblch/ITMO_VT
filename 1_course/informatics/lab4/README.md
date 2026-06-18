@@ -1,8 +1,8 @@
-# 🎯 Data Format Converter
+# 🎯 Лабораторная работа №4
 
 > **Программа для конвертации данных между форматами JSON, YAML и CSV**
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 Описание проекта
 

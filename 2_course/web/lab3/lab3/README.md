@@ -1,11 +1,11 @@
-# 🎯 Point-in-Area Checker
+# 🎯 Лабораторная работа №3
 
 > **Java + PrimeFaces веб-приложение для проверки попадания точки в область и сохранения результатов в БД**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
-[![Gradle](https://img.shields.io/badge/Gradle-8-brightgreen.svg)](https://gradle.org)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://javascript.info)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)](https://www.postgresql.org/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 ## 📋 Описание проекта
 
@@ -38,7 +38,7 @@ lab3/
 ├── build.gradle.kts
 ├── gradle.properties
 ├── settings.gradle.kts
-├── src/
+└── src/
 │   └── main/
 │       ├── java/
 │       │   └── org/example/
@@ -67,5 +67,4 @@ lab3/
 │               ├── beans.xml
 │               ├── faces-config.xml
 │               └── web.xml
-└── build/
 ```

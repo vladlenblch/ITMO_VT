@@ -2,7 +2,7 @@
 
 > **Сборник лабораторных работ и дополнительных заданий по основам программной инженерии**
 
-[![Java](https://img.shields.io/badge/Java-17+-blue.svg)](https://www.java.com/)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 
 ## 📋 О проекте
 

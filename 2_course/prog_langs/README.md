@@ -2,10 +2,9 @@
 
 > **Сборник лабораторных работ и дополнительных заданий по языкам программирования**
 
-![C Version](https://img.shields.io/badge/C-C11%2B-00599C?style=for-the-badge&logo=c)
-![C#](https://img.shields.io/badge/C%23-.NET%208.0-239120?style=for-the-badge&logo=c-sharp)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ## 📋 О проекте
 
